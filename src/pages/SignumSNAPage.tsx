@@ -7,7 +7,7 @@ import SNA from "../assets/img/sna/SNA_switzerland.svg";
 
 import SignumVideoTicker from "../components/VideoTicker";
 import XTWalletVideo from "../assets/img/video/XTWallet.png";
-import AccountHnadlinngVideo from "../assets/img/video/AccountSetup.webp";
+import AccountHandlinngVideo from "../assets/img/video/AccountSetup.webp";
 import MiningVideo from "../assets/img/video/Mining.png";
 import GPUPlotsVideo from "../assets/img/video/GPUPlots.webp";
 import CommitmentVideo from "../assets/img/video/Commitment.png";
@@ -24,7 +24,7 @@ const videos = [
   {
     title: "How to create and set up an account on Signum",
     href: "https://youtu.be/seUnm0GEwXY",
-    thumbnail: AccountHnadlinngVideo,
+    thumbnail: AccountHandlinngVideo,
   },
   {
     title: "How to Mine on the Signum Blockchain",

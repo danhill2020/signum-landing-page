@@ -9,6 +9,7 @@ import { AccountCard } from "@lib/components/AccountCard";
 const linksMenu = [
   { label: "Chain-Statistics", href: "https://stats.signum.network/miner/" },
   { label: "Explorer", href: "https://explorer.signum.network" },
+  { label: "AI", href: "https://www.signaai.io/" },
   { label: "DeFi", href: "https://www.signumswap.com" },
   { label: "NFTs", href: "https://www.signumart.io" },
   { label: "nostr", href: "https://www.nostrum.network/" },
