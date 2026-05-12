@@ -38,7 +38,7 @@ export default function TokensPage() {
       />
 
       {/* HERO */}
-      <header className="relative isolate overflow-hidden border-b border-neutral-200/60 bg-signum-darkblue ">
+      <header className="relative isolate overflow-hidden border-b border-white/10 bg-signum-darkblue ">
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent" />
         <img
           src={Platine}
@@ -135,7 +135,7 @@ function OnThisPageTokens() {
   ];
   return (
     <nav aria-label="On this page" className="card p-4 sticky top-24">
-      <div className="mb-2 text-xs font-medium uppercase tracking-wide text-neutral-600">
+      <div className="mb-2 text-xs font-medium uppercase tracking-wide text-ink-100-300">
         On this page
       </div>
       <ul className="space-y-1 text-sm">
@@ -143,7 +143,7 @@ function OnThisPageTokens() {
           <li key={i.href}>
             <a
               href={i.href}
-              className="block rounded-lg px-2 py-1 text-neutral-700 hover:text-neutral-900 hover:bg-signum-acqua"
+              className="block rounded-lg px-2 py-1 text-ink-100-300 hover:text-ink-100-100 hover:bg-white/5"
             >
               {i.label}
             </a>
@@ -185,16 +185,16 @@ function TokensStatsBand() {
 function WhatAreTokens() {
   return (
     <section id="what" className="scroll-mt-28">
-      <h2 className="text-2xl font-semibold text-signum-midnight">
+      <h2 className="text-2xl font-semibold text-ink-100-100">
         What are Signum Smart Tokens?
       </h2>
-      <p className="mt-3 text-signum-midnight">
+      <p className="mt-3 text-ink-100-100">
         Beyond the native coin SIGNA, Signum lets anyone create smart tokens
         with ne simple transaction. Because they’re native to Signum, they
         automatically share the network’s security and are ready to use
         immediately—no sidechains, bridges, or extra code.
       </p>
-      <p className="mt-3 text-signum-midnight">
+      <p className="mt-3 text-ink-100-100">
         Use them for community coins, loyalty points, access passes, in-app
         credits, or even governance. Transfers are low-fee and fully on-chain —
         no sidechains or bridges.
@@ -202,27 +202,25 @@ function WhatAreTokens() {
 
       <div className="mt-6 grid gap-4 lg:grid-cols-2 xl:grid-cols-3">
         <article className="card p-5">
-          <h3 className="font-semibold text-signum-midnight">
+          <h3 className="font-semibold text-ink-100-100">
             On-chain by default
           </h3>
-          <p className="mt-2 text-signum-midnight text-[15px]">
+          <p className="mt-2 text-ink-100-100 text-[15px]">
             Tokens live directly on the Signum blockchain — simple and
             verifiable.
           </p>
         </article>
         <article className="card p-5">
-          <h3 className="font-semibold text-signum-midnight">
-            Human-scale fees
-          </h3>
-          <p className="mt-2 text-signum-midnight text-[15px]">
+          <h3 className="font-semibold text-ink-100-100">Human-scale fees</h3>
+          <p className="mt-2 text-ink-100-100 text-[15px]">
             Affordable creation and transfers — built for everyday use.
           </p>
         </article>
         <article className="card p-5">
-          <h3 className="font-semibold text-signum-midnight">
+          <h3 className="font-semibold text-ink-100-100">
             Sustainable by PoC+
           </h3>
-          <p className="mt-2 text-signum-midnight text-[15px]">
+          <p className="mt-2 text-ink-100-100 text-[15px]">
             Energy-light consensus that keeps things efficient.
           </p>
         </article>
@@ -267,10 +265,8 @@ function HighlightsGrid() {
   ];
   return (
     <section id="highlights" className="scroll-mt-28">
-      <h2 className="text-2xl font-semibold text-signum-midnight">
-        Highlights
-      </h2>
-      <p className="mt-2 text-signum-midnight">
+      <h2 className="text-2xl font-semibold text-ink-100-100">Highlights</h2>
+      <p className="mt-2 text-ink-100-100">
         The essentials that make Signum tokens practical — and powerful.
       </p>
 
@@ -282,8 +278,8 @@ function HighlightsGrid() {
               alt=""
               className="h-14 w-14 object-contain mb-3 opacity-90"
             />
-            <h3 className="font-semibold text-signum-midnight">{c.title}</h3>
-            <p className="mt-2 text-[15px] text-signum-midnight">{c.body}</p>
+            <h3 className="font-semibold text-ink-100-100">{c.title}</h3>
+            <p className="mt-2 text-[15px] text-ink-100-100">{c.body}</p>
           </article>
         ))}
       </div>
@@ -321,8 +317,8 @@ function UseCasesGrid() {
   ];
   return (
     <section id="use-cases" className="scroll-mt-28">
-      <h2 className="text-2xl font-semibold text-signum-midnight">Use cases</h2>
-      <p className="mt-2 text-signum-midnight">
+      <h2 className="text-2xl font-semibold text-ink-100-100">Use cases</h2>
+      <p className="mt-2 text-ink-100-100">
         From communities to products — tokens add simple, programmable value.
       </p>
 
@@ -334,7 +330,7 @@ function UseCasesGrid() {
               alt=""
               className="h-12 w-12 object-contain mb-3 opacity-90"
             />
-            <h3 className="font-semibold text-signum-midnight">{c.title}</h3>
+            <h3 className="font-semibold text-ink-100-100">{c.title}</h3>
           </article>
         ))}
       </div>
@@ -381,10 +377,10 @@ function CreateTokenSteps() {
 
   return (
     <section id="how-to-create" className="scroll-mt-28">
-      <h2 className="text-2xl font-semibold text-signum-midnight">
+      <h2 className="text-2xl font-semibold text-ink-100-100">
         Create a token
       </h2>
-      <p className="mt-2 text-signum-midnight">
+      <p className="mt-2 text-ink-100-100">
         Three simple steps — then your token is live and transferable.
       </p>
 
@@ -399,13 +395,11 @@ function CreateTokenSteps() {
               style={{ color: "#021851" }}
               size="xl"
             />
-            <div className="text-xs font-medium text-neutral-500">
+            <div className="text-xs font-medium text-ink-100-400">
               Step {s.step}
             </div>
-            <h3 className="mt-1 font-semibold text-signum-midnight">
-              {s.title}
-            </h3>
-            <p className="mt-2 text-[15px] text-signum-midnight">{s.body}</p>
+            <h3 className="mt-1 font-semibold text-ink-100-100">{s.title}</h3>
+            <p className="mt-2 text-[15px] text-ink-100-100">{s.body}</p>
 
             {/* Buttons */}
             {s.link && (
@@ -434,10 +428,10 @@ function CreateTokenSteps() {
 function MarketSection() {
   return (
     <section id="market" className="scroll-mt-28">
-      <h2 className="text-2xl font-semibold text-signum-midnight">
+      <h2 className="text-2xl font-semibold text-ink-100-100">
         Integrated token market
       </h2>
-      <p className="mt-2 text-signum-midnight">
+      <p className="mt-2 text-ink-100-100">
         Tokens are tradable for SIGNA on the on-chain market. <br></br>
         Access it via SignumSwap — the first DeFi portal for Signum.
       </p>
@@ -478,10 +472,10 @@ function DevBox() {
       {/* Kopfbereich: Text links, Icon rechts */}
       <div className="flex items-start justify-between gap-6">
         <div>
-          <h2 className="text-2xl font-semibold text-signum-midnight">
+          <h2 className="text-2xl font-semibold text-ink-100-100">
             Developers
           </h2>
-          <p className="mt-2 text-signum-midnight">
+          <p className="mt-2 text-ink-100-100">
             Build with the Signum SDKs and APIs.
             <br />
             Create, transfer, and distribute tokens with a few lines of code.
@@ -496,8 +490,8 @@ function DevBox() {
       </div>
 
       <article className="card mt-6 p-6">
-        <h3 className="font-semibold text-signum-midnight">SDKs & APIs</h3>
-        <p className="mt-2 text-[15px] text-neutral-700">
+        <h3 className="font-semibold text-ink-100-100">SDKs & APIs</h3>
+        <p className="mt-2 text-[15px] text-ink-100-300">
           Use <code>@signumjs/*</code> packages for assets, accounts, and
           transactions.
         </p>
@@ -565,19 +559,19 @@ function FAQ() {
   ];
   return (
     <section id="faq" className="scroll-mt-28">
-      <h2 className="text-2xl font-semibold text-signum-midnight">FAQ</h2>
-      <div className="mt-4 divide-y divide-neutral-200 rounded-2xl border border-neutral-200 bg-white">
+      <h2 className="text-2xl font-semibold text-ink-100-100">FAQ</h2>
+      <div className="mt-4 divide-y divide-white/10 rounded-2xl border border-white/10 bg-night-2">
         {faqs.map((f, i) => (
           <details key={i} className="group p-5">
             <summary className="flex cursor-pointer list-none items-center justify-between">
-              <span className="font-medium text-signum-midnight">
+              <span className="font-medium text-ink-100-100">
                 <strong>{f.q}</strong>
               </span>
-              <span className="ml-4 text-neutral-400 transition group-open:rotate-180">
+              <span className="ml-4 text-ink-100-400 transition group-open:rotate-180">
                 ⌄
               </span>
             </summary>
-            <p className="mt-2 text-neutral-700 text-[15px]">{f.a}</p>
+            <p className="mt-2 text-ink-100-300 text-[15px]">{f.a}</p>
           </details>
         ))}
       </div>
@@ -590,10 +584,10 @@ function FinalCTA() {
   return (
     <section className="scroll-mt-28 text-center">
       <div className="card p-10">
-        <h3 className="text-xl font-semibold text-signum-midnight">
+        <h3 className="text-xl font-semibold text-ink-100-100">
           Launch something people can actually use.
         </h3>
-        <p className="mt-2 text-neutral-700">
+        <p className="mt-2 text-ink-100-300">
           Create a token in minutes — and keep everything on-chain.
         </p>
         <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">

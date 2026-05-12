@@ -77,7 +77,7 @@ export default function WalletsPage() {
       />
 
       {/* HERO */}
-      <header className="relative isolate overflow-hidden border-b border-neutral-200/60 bg-signum-blue">
+      <header className="relative isolate overflow-hidden border-b border-white/10 bg-signum-blue">
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent" />
 
         <img
@@ -128,26 +128,26 @@ export default function WalletsPage() {
           {/* Flagship Mobile Wallet */}
           <section className="mb-8">
             <article className="relative card overflow-hidden p-6 md:p-10">
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white via-white to-signum-acqua/30" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-night via-night to-night-2" />
 
               <div className="relative z-10 grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
                 <div>
-                  <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-signum-acqua px-4 py-2 text-sm font-semibold text-signum-darkblue">
+                  <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/5 px-4 py-2 text-sm font-semibold text-signum-darkblue">
                     <FontAwesomeIcon icon={faMobileScreenButton} />
                     Official Mobile Wallet · Recommended
                   </div>
 
-                  <h2 className="text-3xl font-bold tracking-tight text-signum-midnight md:text-5xl">
+                  <h2 className="text-3xl font-bold tracking-tight text-ink-100-100 md:text-5xl">
                     Signum Mobile Wallet
                   </h2>
 
-                  <p className="mt-4 max-w-3xl text-lg leading-relaxed text-signum-midnight md:text-xl">
+                  <p className="mt-4 max-w-3xl text-lg leading-relaxed text-ink-100-100 md:text-xl">
                     The flagship wallet for every Signum user. Manage your
                     Signa, tokens and accounts directly from your phone —
                     simple, modern and ready for everyday use.
                   </p>
 
-                  <ul className="mt-6 grid gap-3 text-sm text-signum-midnight sm:grid-cols-2">
+                  <ul className="mt-6 grid gap-3 text-sm text-ink-100-100 sm:grid-cols-2">
                     <li>• Available for iOS and Android</li>
                     <li>• Built for new and existing users</li>
                     <li>• Easy access to your Signum account</li>
@@ -206,7 +206,7 @@ export default function WalletsPage() {
                     <div className="absolute inset-0 translate-x-3 translate-y-4 rounded-[2rem] bg-signum-blue/10 blur-2xl" />
 
                     <div className="relative rotate-0 transition-transform duration-300 lg:rotate-[4deg]">
-                      <div className="rounded-[2.25rem] border border-neutral-200 bg-white p-2.5 shadow-xl">
+                      <div className="rounded-[2.25rem] border border-white/10 bg-night-2 p-2.5 shadow-xl">
                         <img
                           src={SignumMobileWalletScreen}
                           alt="Signum Mobile Wallet app screenshot"
@@ -231,20 +231,20 @@ export default function WalletsPage() {
                 className="absolute right-4 top-4 h-16 w-16 opacity-80"
               />
 
-              <div className="mb-2 text-sm font-semibold text-neutral-900">
+              <div className="mb-2 text-sm font-semibold text-ink-100-100">
                 Browser Extension
               </div>
 
-              <h2 className="text-xl font-semibold text-signum-midnight">
+              <h2 className="text-xl font-semibold text-ink-100-100">
                 Signum XT Wallet
               </h2>
 
-              <p className="mt-2 text-signum-midnight">
+              <p className="mt-2 text-ink-100-100">
                 Easy-to-use web extension to manage accounts, send/receive
                 Signa, tokens & messages, and interact with DApps.
               </p>
 
-              <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-signum-midnight">
+              <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-ink-100-100">
                 <li>Import via passphrase</li>
                 <li>Choose your node</li>
                 <li>Multiple accounts & DApp support</li>
@@ -318,20 +318,20 @@ export default function WalletsPage() {
                 className="absolute right-4 top-4 h-12 w-12 opacity-80"
               />
 
-              <div className="mb-2 text-sm font-semibold text-neutral-900">
+              <div className="mb-2 text-sm font-semibold text-ink-100-100">
                 Cross-platform & Desktop/Web
               </div>
 
-              <h2 className="text-xl font-semibold text-signum-midnight">
+              <h2 className="text-xl font-semibold text-ink-100-100">
                 Phoenix Wallet
               </h2>
 
-              <p className="mt-2 text-signum-midnight">
+              <p className="mt-2 text-ink-100-100">
                 Modern, cross-platform wallet by the community for desktop/web
                 with an easy UI.
               </p>
 
-              <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-signum-midnight">
+              <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-ink-100-100">
                 <li>Multiple accounts & QR support</li>
                 <li>Send Signa with encrypted messages</li>
                 <li>Manage your mining setup</li>
@@ -391,20 +391,18 @@ export default function WalletsPage() {
                 className="absolute right-4 top-4 h-12 w-12 opacity-80"
               />
 
-              <div className="mb-2 text-sm font-semibold text-neutral-900">
+              <div className="mb-2 text-sm font-semibold text-ink-100-100">
                 All-in-one
               </div>
 
-              <h2 className="text-xl font-semibold text-signum-midnight">
-                BTDEX
-              </h2>
+              <h2 className="text-xl font-semibold text-ink-100-100">BTDEX</h2>
 
-              <p className="mt-2 text-signum-midnight">
+              <p className="mt-2 text-ink-100-100">
                 All-in-one app with essential wallet functions, decentralized
                 exchange, plotting & mining tools.
               </p>
 
-              <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-signum-midnight">
+              <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-ink-100-100">
                 <li>Plotting and Mining</li>
                 <li>Manage your commitment</li>
                 <li>Trade on-chain</li>
@@ -466,17 +464,17 @@ export default function WalletsPage() {
                 className="absolute right-4 top-4 h-32 w-32 opacity-80 md:h-40 md:w-40"
               />
 
-              <h3 className="text-lg font-semibold text-signum-midnight">
+              <h3 className="text-lg font-semibold text-ink-100-100">
                 Getting Started
               </h3>
 
-              <p className="mt-6 text-signum-midnight">
+              <p className="mt-6 text-ink-100-100">
                 <strong>New to Signum?</strong>
               </p>
 
-              <p className="text-signum-midnight">Learn about:</p>
+              <p className="text-ink-100-100">Learn about:</p>
 
-              <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-signum-midnight">
+              <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-ink-100-100">
                 <li>Accounts and passphrases</li>
                 <li>Signa and Smart Tokens</li>
                 <li>Signum basics</li>
@@ -533,18 +531,18 @@ export default function WalletsPage() {
                 className="absolute right-4 top-4 h-12 w-12 opacity-80"
               />
 
-              <h3 className="text-lg font-semibold text-signum-midnight">
+              <h3 className="text-lg font-semibold text-ink-100-100">
                 Run a Node
               </h3>
 
-              <p className="mt-2 text-signum-midnight">
+              <p className="mt-2 text-ink-100-100">
                 Ready to contribute? Install Signum Node and help secure the
                 network. It loads and synchronizes the entire blockchain and
                 includes the Classic Wallet. The hardware requirements are not
                 demanding for the node:
               </p>
 
-              <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-signum-midnight">
+              <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-ink-100-100">
                 <li>Minimum: 1 vCPU, 2 GB RAM, 30 GB HDD</li>
                 <li>Recommendation: 2 vCPU, 4 GB RAM, 40 GB HDD</li>
                 <li>Supported DBs: SQLite, MariaDB, PostgreSQL</li>

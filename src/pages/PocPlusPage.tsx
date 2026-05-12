@@ -27,7 +27,7 @@ export default function PocPlusPage() {
         url="https://www.signum.network/"
       />
       {/* HERO */}
-      <header className="relative isolate overflow-hidden border-b border-neutral-200/60 bg-signum-blue">
+      <header className="relative isolate overflow-hidden border-b border-white/10 bg-signum-blue">
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent" />
         <img
           src={Platine}
@@ -86,12 +86,12 @@ export default function PocPlusPage() {
       </header>
 
       <main>
-        <section className="bg-white">
+        <section className="bg-night-2">
           <Container className="py-16">
             <div className="grid grid-cols-1 gap-10 xl:grid-cols-5">
               <div className="md:col-span-3">
                 <article className="relative card p-6 overflow-hidden">
-                  <h3 className="text-[24px] font-semibold text-signum-midnight mb-4">
+                  <h3 className="text-[24px] font-semibold text-ink-100-100 mb-4">
                     What is PoC+?
                   </h3>
                   <p>
@@ -125,7 +125,7 @@ export default function PocPlusPage() {
 
               <aside className="md:col-span-2">
                 <div className="relative card p-6 overflow-hidden">
-                  <h3 className="text-[24px] font-semibold text-signum-midnight mb-4">
+                  <h3 className="text-[24px] font-semibold text-ink-100-100 mb-4">
                     Sustainable first
                   </h3>
                   <p>
@@ -176,7 +176,7 @@ export default function PocPlusPage() {
               </div>
               <div className="self-center">
                 <article className="relative card p-6 overflow-hidden">
-                  <h3 className="text-2xl font-semibold text-signum-midnight mb-4">
+                  <h3 className="text-2xl font-semibold text-ink-100-100 mb-4">
                     Runs on what you already have
                   </h3>
                   <p>
@@ -209,7 +209,7 @@ export default function PocPlusPage() {
                   className="h-24 w-24 mx-auto mb-4"
                   loading="lazy"
                 />
-                <h4 className="text-lg font-semibold text-signum-midnight">
+                <h4 className="text-lg font-semibold text-ink-100-100">
                   PoC+ Capacity
                 </h4>
                 <p className="mt-2 text-left">
@@ -227,7 +227,7 @@ export default function PocPlusPage() {
                   className="h-24 w-24 mx-auto mb-4"
                   loading="lazy"
                 />
-                <h4 className="text-lg font-semibold text-signum-midnight">
+                <h4 className="text-lg font-semibold text-ink-100-100">
                   PoC+ Commitment
                 </h4>
                 <p className="mt-2 text-left">
@@ -245,7 +245,7 @@ export default function PocPlusPage() {
                   className="h-24 w-24 mx-auto mb-4"
                   loading="lazy"
                 />
-                <h4 className="text-lg font-semibold text-signum-midnight">
+                <h4 className="text-lg font-semibold text-ink-100-100">
                   PoC+ Factor
                 </h4>
                 <p className="mt-2 text-left">
@@ -272,7 +272,7 @@ export default function PocPlusPage() {
                     />
                   </div>
                   <div className="md:col-span-2 py-6">
-                    <h4 className="text-lg font-semibold text-signum-midnight px-6">
+                    <h4 className="text-lg font-semibold text-ink-100-100 px-6">
                       Factor 0.125x
                     </h4>
                     <p className="px-6 mt-2 text-left">
@@ -295,7 +295,7 @@ export default function PocPlusPage() {
                     />
                   </div>
                   <div className="md:col-span-2 py-6">
-                    <h4 className="text-lg font-semibold text-signum-midnight px-6">
+                    <h4 className="text-lg font-semibold text-ink-100-100 px-6">
                       Factor 1x
                     </h4>
                     <p className=" px-6 mt-2 text-left">
@@ -317,7 +317,7 @@ export default function PocPlusPage() {
                     />
                   </div>
                   <div className="md:col-span-2 py-6">
-                    <h4 className="text-lg font-semibold text-signum-midnight px-6">
+                    <h4 className="text-lg font-semibold text-ink-100-100 px-6">
                       Factor 8x
                     </h4>
                     <p className="px-6 mt-2 text-left">
@@ -338,7 +338,7 @@ export default function PocPlusPage() {
           </div>
         </section>
         <CTACommitment />
-        <section className="bg-white">
+        <section className="bg-night-2">
           <Container className="py-12 text-center">
             <div className="flex flex-wrap justify-center gap-3">
               <Link to="/wallet" className="btn btn-primary">
@@ -361,7 +361,7 @@ export default function PocPlusPage() {
 
   function CTACommitment() {
     return (
-      <div className="bg-gradient-to-b from-signum-acqua/40 to-white text-signum-midnight">
+      <div className="bg-gradient-to-b from-night-2 to-night text-ink-100-100">
         <section className="py-16">
           <div className="mx-auto max-w-5xl">
             <h1 className="text-3xl font-semibold text-center mb-8">

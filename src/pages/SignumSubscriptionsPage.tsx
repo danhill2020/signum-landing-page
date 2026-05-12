@@ -206,7 +206,7 @@ export default function SignumSubscriptions() {
         url="https://www.signum.network/mining"
       />
 
-      <header className="relative isolate overflow-hidden border-b border-neutral-200/60 bg-signum-blue">
+      <header className="relative isolate overflow-hidden border-b border-white/10 bg-signum-blue">
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent" />
         <img
           src={Platine}
@@ -260,8 +260,8 @@ export default function SignumSubscriptions() {
                   <button
                     type="button"
                     onClick={handleManualRefresh}
-                    className="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-semibold
-                           text-signum-midnight shadow-sm transition hover:border-signum-blue hover:text-signum-blue"
+                    className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-night-2 px-4 py-2 text-sm font-semibold
+                           text-ink-100-100 shadow-sm transition hover:border-signum-blue hover:text-signum-blue"
                     disabled={isLoading}
                   >
                     <RefreshCw
@@ -323,7 +323,7 @@ function SubscriptionsSection({
 }) {
   if (isLoading) {
     return (
-      <div className="card p-6 text-center text-sm text-neutral-600">
+      <div className="card p-6 text-center text-sm text-ink-100-300">
         Loading subscriptions…
       </div>
     );
@@ -332,10 +332,10 @@ function SubscriptionsSection({
   if (!subscriptions.length && !receiving.length) {
     return (
       <div className="card p-8 text-center">
-        <h3 className="text-xl font-semibold text-signum-midnight">
+        <h3 className="text-xl font-semibold text-ink-100-100">
           No active subscriptions yet
         </h3>
-        <p className="mt-3 text-sm text-neutral-600">
+        <p className="mt-3 text-sm text-ink-100-300">
           Create a subscription from your Signum wallet to see it appear here.
           Once it is set up the dashboard keeps track of every automatic payment
           for you.
@@ -375,14 +375,12 @@ function UpcomingPayments({ upcoming }: { upcoming: SubscriptionView[] }) {
     <section className="space-y-4">
       <div>
         <h3 className="text-lg font-semibold">Upcoming payments</h3>
-        <p className="text-sm text-signum-midnight">
-          Due within the next 10 days.
-        </p>
+        <p className="text-sm text-ink-100-100">Due within the next 10 days.</p>
       </div>
 
-      <div className="overflow-hidden rounded-2xl border border-neutral-200 bg-white">
-        <table className="min-w-full divide-y divide-neutral-200 text-left text-sm">
-          <thead className="bg-neutral-50 text-neutral-600">
+      <div className="overflow-hidden rounded-2xl border border-white/10 bg-night-2">
+        <table className="min-w-full divide-y divide-white/10 text-left text-sm">
+          <thead className="bg-night-2 text-ink-100-300">
             <tr>
               <th className="px-4 py-3 font-semibold">Subscription</th>
               <th className="px-4 py-3 font-semibold text-right">Amount</th>
@@ -395,9 +393,9 @@ function UpcomingPayments({ upcoming }: { upcoming: SubscriptionView[] }) {
             </tr>
           </thead>
 
-          <tbody className="divide-y divide-neutral-200">
+          <tbody className="divide-y divide-white/10">
             {upcoming.map((subscription) => (
-              <tr key={subscription.raw.id} className="bg-white/80">
+              <tr key={subscription.raw.id} className="bg-night-2/85">
                 <td className="px-4 py-3">
                   <div className="flex items-center gap-3">
                     <img
@@ -406,23 +404,23 @@ function UpcomingPayments({ upcoming }: { upcoming: SubscriptionView[] }) {
                       className="h-8 w-8 flex-none rounded-lg"
                     />
                     <div>
-                      <div className="font-medium text-signum-midnight">
+                      <div className="font-medium text-ink-100-100">
                         {subscription.displayName}
                       </div>
-                      <div className="text-xs text-neutral-500">
+                      <div className="text-xs text-ink-100-400">
                         ID {subscription.raw.id}
                       </div>
                     </div>
                   </div>
                 </td>
 
-                <td className="px-4 py-3 text-right font-semibold text-signum-midnight">
+                <td className="px-4 py-3 text-right font-semibold text-ink-100-100">
                   Ꞩ {formatSigna(subscription.amount)}
                 </td>
 
-                <td className="px-4 py-3 text-right text-sm text-neutral-600 whitespace-nowrap">
+                <td className="px-4 py-3 text-right text-sm text-ink-100-300 whitespace-nowrap">
                   {formatRelative(subscription.nextPaymentDate)}
-                  <span className="ml-2 text-xs text-neutral-400">
+                  <span className="ml-2 text-xs text-ink-100-400">
                     ({formatDate(subscription.nextPaymentDate)})
                   </span>
                 </td>
@@ -448,7 +446,7 @@ function ActiveSubscriptions({
     <section className="space-y-4">
       <div>
         <h3 className="text-lg font-semibold">Active subscriptions</h3>
-        <p className="text-sm text-neutral-600">
+        <p className="text-sm text-ink-100-300">
           Every recurring payment created from this account.
         </p>
       </div>
@@ -467,48 +465,48 @@ function ActiveSubscriptions({
                   className="h-8 w-8 rounded-xl"
                 />
                 <div>
-                  <div className="font-semibold text-signum-midnight">
+                  <div className="font-semibold text-ink-100-100">
                     {subscription.displayName}
                   </div>
-                  <div className="text-xs text-neutral-500">
+                  <div className="text-xs text-ink-100-400">
                     Recipient ID {subscription.raw.recipient}
                   </div>
                 </div>
               </div>
-              <span className="rounded-full bg-signum-acqua px-3 py-1 text-xs font-semibold text-signum-midnight">
+              <span className="rounded-full bg-white/5 px-3 py-1 text-xs font-semibold text-ink-100-100">
                 Every {describeFrequency(subscription.raw.frequency)}
               </span>
             </div>
 
             <div className="flex flex-wrap items-start justify-between gap-2 text-sm">
-              <div className="text-neutral-600">
+              <div className="text-ink-100-300">
                 <div>Amount per cycle</div>
                 <div className="mt-1 flex items-center gap-3 whitespace-nowrap">
-                  <div className="text-lg font-semibold text-signum-midnight leading-none">
+                  <div className="text-lg font-semibold text-ink-100-100 leading-none">
                     Ꞩ {formatSigna(subscription.amount)}
                   </div>
                   <SubscriptionCancelButton id={subscription.raw.id} />
                 </div>
               </div>
 
-              <div className="text-neutral-600">
+              <div className="text-ink-100-300">
                 Next payment
-                <div className="text-sm font-semibold text-signum-midnight">
+                <div className="text-sm font-semibold text-ink-100-100">
                   {formatRelative(subscription.nextPaymentDate)}
                 </div>
-                <div className="text-xs text-neutral-500">
+                <div className="text-xs text-ink-100-400">
                   {formatDate(subscription.nextPaymentDate)}
                 </div>
               </div>
             </div>
 
             {subscription.hasAlias && subscription.aliasLabel && (
-              <div className="rounded-xl bg-signum-acqua px-3 py-2 text-xs text-signum-midnight">
+              <div className="rounded-xl bg-white/5 px-3 py-2 text-xs text-ink-100-100">
                 Alias renewal fees for {subscription.aliasLabel}
               </div>
             )}
 
-            <div className="text-xs text-neutral-400">
+            <div className="text-xs text-ink-100-400">
               Subscription ID: {subscription.raw.id}
             </div>
           </article>
@@ -531,7 +529,7 @@ function ActiveReceivingSubscriptions({
         <h3 className="text-lg font-semibold">
           Active receiving subscriptions
         </h3>
-        <p className="text-sm text-neutral-600">
+        <p className="text-sm text-ink-100-300">
           Recurring payments **to** this account (created by other accounts).
         </p>
       </div>
@@ -550,45 +548,45 @@ function ActiveReceivingSubscriptions({
                   className="h-8 w-8 rounded-xl"
                 />
                 <div>
-                  <div className="font-semibold text-signum-midnight">
+                  <div className="font-semibold text-ink-100-100">
                     {subscription.displayName}
                   </div>
-                  <div className="text-xs text-neutral-500">
+                  <div className="text-xs text-ink-100-400">
                     Sender ID {subscription.raw.sender}
                   </div>
                 </div>
               </div>
-              <span className="rounded-full bg-signum-acqua px-3 py-1 text-xs font-semibold text-signum-midnight">
+              <span className="rounded-full bg-white/5 px-3 py-1 text-xs font-semibold text-ink-100-100">
                 Every {describeFrequency(subscription.raw.frequency)}
               </span>
             </div>
 
             <div className="flex flex-wrap items-start justify-between gap-2 text-sm">
-              <div className="text-neutral-600">
+              <div className="text-ink-100-300">
                 <div>Amount per cycle</div>
-                <div className="mt-1 text-lg font-semibold text-signum-midnight leading-none">
+                <div className="mt-1 text-lg font-semibold text-ink-100-100 leading-none">
                   Ꞩ {formatSigna(subscription.amount)}
                 </div>
               </div>
 
-              <div className="text-neutral-600">
+              <div className="text-ink-100-300">
                 Next payment
-                <div className="text-sm font-semibold text-signum-midnight">
+                <div className="text-sm font-semibold text-ink-100-100">
                   {formatRelative(subscription.nextPaymentDate)}
                 </div>
-                <div className="text-xs text-neutral-500">
+                <div className="text-xs text-ink-100-400">
                   {formatDate(subscription.nextPaymentDate)}
                 </div>
               </div>
             </div>
 
             {subscription.hasAlias && subscription.aliasLabel && (
-              <div className="rounded-xl bg-signum-acqua px-3 py-2 text-xs text-signum-midnight">
+              <div className="rounded-xl bg-white/5 px-3 py-2 text-xs text-ink-100-100">
                 Alias renewal fees for {subscription.aliasLabel}
               </div>
             )}
 
-            <div className="text-xs text-neutral-400">
+            <div className="text-xs text-ink-100-400">
               Subscription ID: {subscription.raw.id}
             </div>
           </article>
@@ -617,7 +615,7 @@ function SummaryComparePanel({
 }) {
   if (!isWalletConnected) {
     return (
-      <div className="card p-6 text-sm text-neutral-600">
+      <div className="card p-6 text-sm text-ink-100-300">
         Connect your Signum wallet to inspect subscriptions and balances.
       </div>
     );
@@ -629,13 +627,13 @@ function SummaryComparePanel({
         <div className="text-[11px] uppercase tracking-wider text-red-900">
           Payments
         </div>
-        <div className="mt-1 font-semibold text-signum-midnight">{left}</div>
+        <div className="mt-1 font-semibold text-ink-100-100">{left}</div>
       </div>
       <div className="text-right">
         <div className="text-[11px] uppercase tracking-wider text-green-900">
           Earnings
         </div>
-        <div className="mt-1 font-semibold text-signum-midnight">{right}</div>
+        <div className="mt-1 font-semibold text-ink-100-100">{right}</div>
       </div>
     </div>
   );
@@ -644,7 +642,7 @@ function SummaryComparePanel({
     d ? (
       <>
         {formatRelative(d)} <br></br>
-        <span className="text-xs text-neutral-500">({formatDate(d)})</span>
+        <span className="text-xs text-ink-100-400">({formatDate(d)})</span>
       </>
     ) : (
       "—"
@@ -654,7 +652,7 @@ function SummaryComparePanel({
     <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
       {/* Total per cycle */}
       <div className="card p-6">
-        <div className="text-xs uppercase tracking-wider text-signum-midnight font-bold">
+        <div className="text-xs uppercase tracking-wider text-ink-100-100 font-bold">
           Total per cycle
         </div>
         <TwoCol
@@ -665,7 +663,7 @@ function SummaryComparePanel({
 
       {/* Estimated per month */}
       <div className="card p-6">
-        <div className="text-xs uppercase tracking-wider text-signum-midnight font-bold">
+        <div className="text-xs uppercase tracking-wider text-ink-100-100 font-bold">
           Estimated per month
         </div>
         <TwoCol
@@ -676,7 +674,7 @@ function SummaryComparePanel({
 
       {/* Next payment */}
       <div className="card p-6">
-        <div className="text-xs uppercase tracking-wider text-signum-midnight font-bold">
+        <div className="text-xs uppercase tracking-wider text-ink-100-100 font-bold">
           Next payment
         </div>
         <TwoCol
@@ -690,11 +688,11 @@ function SummaryComparePanel({
 
 function ConnectWalletNotice() {
   return (
-    <div className="card border border-dashed border-signum-blue/40 bg-signum-acqua/40 p-8 text-center">
-      <h3 className="text-xl font-semibold text-signum-midnight">
+    <div className="card border border-dashed border-signum-blue/40 bg-white/5 p-8 text-center">
+      <h3 className="text-xl font-semibold text-ink-100-100">
         Connect a Signum wallet
       </h3>
-      <p className="mt-3 text-sm text-neutral-600">
+      <p className="mt-3 text-sm text-ink-100-300">
         Open the wallet connection panel and link your account to load your
         subscriptions. You can monitor every automatic payment right after
         connecting.

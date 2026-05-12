@@ -46,13 +46,13 @@ export default function EssentialCookiesBanner() {
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 p-3 sm:p-4">
       <div className="mx-auto max-w-4xl">
-        <div className="rounded-2xl bg-white/95 backdrop-blur ring-1 ring-black/10 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.35)] p-4 sm:p-5">
+        <div className="rounded-2xl bg-night-2/95 backdrop-blur ring-1 ring-white/10 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.35)] p-4 sm:p-5">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div className="min-w-0">
-              <p className="text-sm font-semibold text-signum-midnight">
+              <p className="text-sm font-semibold text-ink-100-100">
                 Essential cookies only
               </p>
-              <p className="mt-1 text-sm text-neutral-700">
+              <p className="mt-1 text-sm text-ink-100-300">
                 We only use strictly necessary cookies to keep this site secure
                 and working. Learn more in our{" "}
                 <Link
