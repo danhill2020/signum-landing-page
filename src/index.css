@@ -34,6 +34,14 @@
   --color-signum-lightacqua: #eaf0f6;
   --color-signum-midnight: #021851;
 
+  /* Dark "isometric neon" surfaces */
+  --color-night: #060d1e;
+  --color-night-2: #0b1730;
+  --color-night-3: #0f2042;
+  --color-ink-100: #e8eef9;
+  --color-ink-300: #b6c6e6;
+  --color-ink-400: #8ea2c8;
+
   --radius-2xl: 1.25rem;
   --radius-3xl: 1.75rem;
 
@@ -77,6 +85,26 @@
     @apply text-xs uppercase tracking-widest text-neutral-500;
   }
 
+  /* ---- Dark theme helpers ---- */
+  .card-dark {
+    @apply rounded-2xl bg-night-2 ring-1 ring-white/10 transition
+           hover:ring-signum-blue/40 hover:shadow-[0_22px_70px_-20px_rgba(0,153,255,0.45)];
+  }
+  .btn-outline {
+    @apply border border-white/20 bg-white/5 text-white hover:bg-white/10;
+  }
+  .kicker-blue {
+    @apply text-xs font-semibold uppercase tracking-[0.25em] text-signum-blue;
+  }
+  .glow-blob {
+    @apply pointer-events-none absolute rounded-full blur-3xl;
+    background: radial-gradient(
+      circle,
+      rgba(0, 153, 255, 0.35),
+      rgba(0, 153, 255, 0) 70%
+    );
+  }
+
   .section {
     @apply relative overflow-hidden;
   }
@@ -89,7 +117,7 @@
   }
 
   .navlink-underline {
-    @apply relative text-[18px] text-neutral-700 hover:text-black transition;
+    @apply relative text-[18px] text-ink-300 hover:text-white transition;
   }
 
   .navlink-underline::after {
@@ -102,7 +130,7 @@
   }
 
   .navlink-underline-active {
-    @apply text-black;
+    @apply text-white;
   }
 
   .navlink-underline-active::after {

@@ -117,36 +117,84 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative border-t border-neutral-200/60 bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-      {/* hairline gradient (Apple-ish) */}
-      <div className="pointer-events-none absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent" />
+    <footer className="relative border-t border-white/10 bg-night text-ink-300">
+      {/* hairline glow */}
+      <div className="pointer-events-none absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-signum-blue/40 to-transparent" />
       <Container className="py-14">
-        {/* brand + short claim */}
-        <div className="mb-10 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
-          <div className="flex items-center gap-3">
-            <img
-              src="/img/logo/Signum_Logomark_black.svg"
-              alt="Signum Logo"
-              className="h-5 w-5"
-            />
-            <span className="font-semibold tracking-wide text-neutral-900">
-              SIGNUM
-            </span>
-            <span className="sr-only">Signum Network</span>
+        {/* brand + short claim + network */}
+        <div className="mb-12 flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
+          <div className="max-w-md">
+            <div className="flex items-center gap-3">
+              <img
+                src="/img/logo/Signum_Logomark_black.svg"
+                alt="Signum Logo"
+                className="h-6 w-6 brightness-0 invert"
+              />
+              <span className="text-lg font-semibold tracking-wide text-ink-100">
+                SIGNUM
+              </span>
+              <span className="sr-only">Signum Network</span>
+            </div>
+            <p className="mt-3 text-sm text-ink-300">
+              Sustainable blockchain infrastructure for payments, smart
+              contracts, tokens and AI agents — secured by disk space.
+            </p>
           </div>
-          <p className="text-sm text-signum-midnight">
-            Sustainable payments, tokens & smart contracts.
-          </p>
+
+          <div className="rounded-2xl bg-night-2 p-5 ring-1 ring-white/10">
+            <div className="text-[11px] font-semibold uppercase tracking-widest text-ink-400">
+              Network
+            </div>
+            <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-ink-300">
+              <a
+                href="https://explorer.signum.network"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10 transition hover:text-white"
+              >
+                Explorer
+              </a>
+              <a
+                href="https://stats.signum.network/miner/"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10 transition hover:text-white"
+              >
+                Chain stats
+              </a>
+              <a
+                href="https://explorer.signum.network"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1 font-medium text-signum-blue"
+              >
+                View network explorer
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* link columns */}
         <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
           {sections.map((s) => (
             <nav key={s.title} aria-label={s.title}>
-              <h3 className="mb-3 text-sm font-semibold text-neutral-900">
+              <h3 className="mb-3 text-sm font-semibold text-ink-100">
                 <span className="relative inline-block">
                   {s.title}
-                  <span className="absolute -bottom-1 left-0 h-[2px] w-7 rounded bg-gradient-to-r from-sky-500 to-blue-600/80" />
+                  <span className="absolute -bottom-1 left-0 h-[2px] w-7 rounded bg-gradient-to-r from-signum-blue to-signum-darkblue" />
                 </span>
               </h3>
               <ul className="space-y-2">
@@ -155,22 +203,22 @@ export default function Footer() {
                     {l.to ? (
                       <Link
                         to={l.to}
-                        className="flex items-center gap-2 text-[15px] text-neutral-700 transition-colors hover:text-neutral-900"
+                        className="flex items-center gap-2 text-[15px] text-ink-300 transition-colors hover:text-white"
                       >
                         {l.Icon && (
                           <FontAwesomeIcon
                             icon={l.Icon}
-                            className="text-neutral-500 text-[16px]"
+                            className="text-ink-400 text-[16px]"
                           />
                         )}
                         {l.label}
                       </Link>
                     ) : l.href === "#" || !l.href ? (
-                      <span className="flex items-center gap-2 text-[15px] text-neutral-500 cursor-default select-none">
+                      <span className="flex items-center gap-2 text-[15px] text-ink-400 cursor-default select-none">
                         {l.Icon && (
                           <FontAwesomeIcon
                             icon={l.Icon}
-                            className="text-neutral-400 text-[16px]"
+                            className="text-ink-400 text-[16px]"
                           />
                         )}
                         <strong>{l.label}</strong>
@@ -180,12 +228,12 @@ export default function Footer() {
                         href={l.href}
                         target="_blank"
                         rel="noreferrer"
-                        className="flex items-center gap-2 text-[15px] text-neutral-700 transition-colors hover:text-neutral-900"
+                        className="flex items-center gap-2 text-[15px] text-ink-300 transition-colors hover:text-white"
                       >
                         {l.Icon && (
                           <FontAwesomeIcon
                             icon={l.Icon}
-                            className="text-neutral-500 text-[16px]"
+                            className="text-ink-400 text-[16px]"
                           />
                         )}
                         {l.label}
@@ -205,11 +253,11 @@ export default function Footer() {
                       target="_blank"
                       rel="noreferrer"
                       aria-label={s.name}
-                      className="group rounded-full p-2 ring-1 ring-neutral-200 transition hover:ring-neutral-300"
+                      className="group rounded-full p-2 ring-1 ring-white/10 transition hover:ring-signum-blue/40"
                     >
                       <FontAwesomeIcon
                         icon={s.Icon}
-                        className="text-xl text-neutral-600 transition group-hover:text-neutral-900"
+                        className="text-xl text-ink-300 transition group-hover:text-white"
                       />
                     </a>
                   ))}
@@ -220,8 +268,8 @@ export default function Footer() {
         </div>
 
         {/* bottom bar */}
-        <div className="mt-12 flex flex-col justify-center gap-4 border-t border-neutral-200/70 pt-6 text-sm text-neutral-600 sm:flex-row sm:items-center">
-          <span>© {year} SIGNUM</span>
+        <div className="mt-12 flex flex-col justify-center gap-4 border-t border-white/10 pt-6 text-sm text-ink-400 sm:flex-row sm:items-center">
+          <span>© {year} Signum Network. All rights reserved.</span>
         </div>
       </Container>
     </footer>
