@@ -5,13 +5,11 @@ import { Link } from "react-router-dom";
 import HeroSignum from "../components/HeroSignum";
 import FeatureImageCard from "../components/FeatureImageCard";
 import type { FeatureCard } from "../components/FeatureImageCard";
-import SignumVideoTicker from "../components/VideoTicker";
 
 import featurePayments from "../assets/img/landing/feature-payments.png";
 import featureWallets from "../assets/img/landing/feature-wallets.png";
 import featureMining from "../assets/img/landing/feature-mining.png";
 import featureContracts from "../assets/img/landing/feature-contracts.png";
-import featureSustainability from "../assets/img/landing/feature-sustainability.png";
 import featureEcosystem from "../assets/img/landing/feature-ecosystem.png";
 import heroIsometric from "../assets/img/landing/hero-isometric.png";
 
@@ -65,14 +63,7 @@ export default function SignumMainPage() {
         <FeatureGrid />
         <SignaAISection />
         <Ecosystem />
-        <SignumVideoTicker
-          title="Guides, tutorials & insights"
-          subtitle="Short videos to get you from zero to Signum Pro."
-          items={videos}
-          speed={{ base: 40, md: 30, lg: 60, "2xl": 80 }}
-          direction="left"
-          pauseOnHover
-        />
+        <LearnSection />
         <CTA />
       </div>
     </>
@@ -81,24 +72,25 @@ export default function SignumMainPage() {
 
 function StatsBand() {
   const stats = [
-    { value: "~4 min", label: "Block time" },
-    { value: "375,360 Bytes", label: "Max block size" },
-    { value: "Up to 5,000", label: "Max STP / sec" },
-    { value: "0.01 SIGNA", label: "Min fee" },
-    { value: "PoC+", label: "Consensus" },
-    { value: "10+ Years", label: "Proven & reliable" },
+    { value: "Since 2014", label: "Proven mainnet" },
+    { value: "PoC+", label: "Disk-space consensus" },
+    { value: "0.01 SIGNA", label: "Minimum transfer fee" },
+    { value: "~4 min", label: "Predictable block time" },
   ];
 
   return (
-    <section className="border-y border-white/10 bg-night-2">
+    <section className="border-y border-white/10 bg-night-2/85">
       <Container>
-        <ul className="grid grid-cols-2 divide-x divide-white/5 sm:grid-cols-3 lg:grid-cols-6">
+        <ul className="grid gap-px py-px sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((s) => (
-            <li key={s.label} className="px-4 py-7 text-center">
-              <div className="text-xl font-semibold tracking-tight text-ink-100 sm:text-2xl">
+            <li
+              key={s.label}
+              className="bg-night-2 px-5 py-5 text-center sm:py-6"
+            >
+              <div className="text-lg font-semibold tracking-tight text-ink-100 sm:text-xl">
                 {s.value}
               </div>
-              <div className="mt-1 text-[11px] uppercase tracking-widest text-ink-400">
+              <div className="mt-1 text-[10px] uppercase tracking-widest text-ink-400">
                 {s.label}
               </div>
             </li>
@@ -113,64 +105,64 @@ function FeatureGrid() {
   const cards: FeatureCard[] = [
     {
       title: "Proof-of-Commitment (PoC+)",
-      desc: "Mine with disk space and boost rewards by committing SIGNA on-chain — sustainable, fair and battle-tested.",
+      desc: "Secure the network with disk space and boost rewards by committing SIGNA on-chain.",
       img: heroIsometric,
       to: "/pocplus",
+      imagePosition: "center 48%",
       wide: true,
     },
     {
       title: "Payments",
-      desc: "Fast, low-fee transfers with rich attachments, aliases and multi-out support.",
+      desc: "Low-fee transfers with aliases, attachments and multi-out support.",
       img: featurePayments,
       to: "/payments",
+      imagePosition: "68% 52%",
     },
     {
       title: "Wallets",
-      desc: "Secure, simple and powerful wallets for everyone — desktop, mobile and hardware.",
+      desc: "Manage SIGNA from desktop, mobile and hardware-backed wallets.",
       img: featureWallets,
       to: "/wallet",
+      imagePosition: "62% 50%",
     },
     {
       title: "Mining",
-      desc: "Home-miner friendly, efficient and sustainable. Put your disk space to work with PoC+.",
+      desc: "Home-miner friendly setup for pool or solo mining with disk space.",
       img: featureMining,
       to: "/mining",
+      imagePosition: "65% 52%",
     },
     {
       title: "Smart Contracts",
-      desc: "Build powerful dApps with self-executing contracts that run reliably on-chain.",
+      desc: "Create autonomous on-chain logic for payments, tokens and apps.",
       img: featureContracts,
       to: "/smartcontracts",
-    },
-    {
-      title: "Sustainability",
-      desc: "Built by design for a greener future — secured by disk space, not wasted energy.",
-      img: featureSustainability,
-      to: "/pocplus",
+      imagePosition: "66% 52%",
     },
     {
       title: "Ecosystem",
-      desc: "Wallets, exchanges, DeFi, NFTs, AI and the partners building on Signum.",
+      desc: "Wallets, exchanges, DeFi, NFTs, AI and builders connected by Signum.",
       img: featureEcosystem,
       href: "#ecosystem",
+      imagePosition: "center 48%",
       wide: true,
     },
   ];
 
   return (
-    <section id="features" className="scroll-mt-16 bg-night py-20 sm:py-24">
+    <section id="features" className="scroll-mt-16 bg-night py-16 sm:py-20">
       <Container>
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <div className="kicker-blue">Powering real-world crypto</div>
+            <div className="kicker-blue">Core network capabilities</div>
             <h2 className="mt-3 max-w-2xl text-3xl font-semibold tracking-tight text-ink-100 sm:text-4xl">
-              Everything you need to{" "}
-              <span className="text-signum-blue">build</span> and{" "}
-              <span className="text-signum-blue">grow</span>.
+              Sustainable blockchain infrastructure for payments, contracts and
+              mining.
             </h2>
             <p className="mt-3 max-w-2xl text-ink-300">
-              From fast payments to smart contracts and mining — the building
-              blocks for sustainable blockchain innovation.
+              Start with the primitives that matter: reliable transactions,
+              programmable logic, accessible mining and wallets people can
+              actually use.
             </p>
           </div>
           <a
@@ -188,8 +180,42 @@ function FeatureGrid() {
             <FeatureImageCard key={c.title} c={c} />
           ))}
         </div>
+
+        <SustainabilityProof />
       </Container>
     </section>
+  );
+}
+
+function SustainabilityProof() {
+  const points = [
+    {
+      title: "Energy-aware by design",
+      text: "Security comes from committed disk capacity instead of constant high-power hashing.",
+    },
+    {
+      title: "Open participation",
+      text: "Mining can run on accessible hardware, keeping the network approachable for smaller operators.",
+    },
+    {
+      title: "Long-term utility",
+      text: "A decade of mainnet history backs the practical payments, tokens and contract layer.",
+    },
+  ];
+
+  return (
+    <div className="mt-6 grid gap-4 rounded-2xl border border-white/10 bg-night-2/60 p-4 sm:grid-cols-3">
+      {points.map((point) => (
+        <div key={point.title} className="p-3">
+          <div className="text-sm font-semibold text-ink-100">
+            {point.title}
+          </div>
+          <p className="mt-2 text-sm leading-relaxed text-ink-300">
+            {point.text}
+          </p>
+        </div>
+      ))}
+    </div>
   );
 }
 
@@ -197,52 +223,47 @@ function SignaAISection() {
   const layers = [
     {
       title: "Payments",
-      text: "Let AI agents send and receive SIGNA with low fixed fees.",
+      text: "Agents can send and receive SIGNA with predictable fees.",
     },
     {
       title: "Identity",
-      text: "Register agents on-chain and build reputation from real activity.",
+      text: "On-chain accounts give agents a traceable operating history.",
     },
     {
       title: "Verify",
-      text: "Stamp AI outputs on-chain so changes can be detected later.",
+      text: "Outputs can be timestamped so later changes are detectable.",
     },
     {
       title: "Escrow",
-      text: "Lock payments in self-executing smart contracts until work is delivered.",
+      text: "Smart contracts can hold payment until agreed conditions are met.",
     },
   ];
 
   return (
-    <section className="bg-night py-20 sm:py-24">
+    <section className="bg-night py-14 sm:py-18">
       <Container>
-        <div className="relative overflow-hidden rounded-[2rem] bg-night-2 p-6 ring-1 ring-white/10 md:p-10 lg:p-12">
-          <div className="glow-blob -right-24 -top-24 h-72 w-72" />
-          <div className="glow-blob -bottom-24 -left-24 h-72 w-72 opacity-70" />
+        <div className="relative overflow-hidden rounded-2xl bg-night-2 p-6 ring-1 ring-white/10 md:p-8 lg:p-10">
+          <div className="glow-blob -right-24 -top-24 h-60 w-60" />
 
-          <div className="relative z-10 grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div className="relative z-10 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div>
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-signum-blue/15 px-4 py-2 text-sm font-semibold text-signum-blue ring-1 ring-signum-blue/30">
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-signum-blue/15 px-3 py-1.5 text-xs font-semibold text-signum-blue ring-1 ring-signum-blue/30">
                 <span className="h-2 w-2 rounded-full bg-signum-lightgreen" />
-                Live AI infrastructure on Signum
+                Built on Signum
               </div>
 
-              <h2 className="text-3xl font-semibold tracking-tight text-ink-100 sm:text-4xl lg:text-5xl">
-                AI can lie.
-                <br />
-                <span className="text-signum-blue">
-                  Signum can prove accountability.
-                </span>
+              <h2 className="text-2xl font-semibold tracking-tight text-ink-100 sm:text-3xl lg:text-4xl">
+                SignaAI uses Signum as an accountability layer for autonomous
+                agents.
               </h2>
 
-              <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-300">
-                SignaAI turns Signum into an accountability layer for AI agents:
-                hire, verify and pay autonomous agents on-chain — with proof of
-                who produced what, when it was stamped, and whether payment
-                conditions were met.
+              <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-300">
+                Hire, verify and pay AI agents on-chain with proof of who
+                produced what, when it was stamped and whether payment
+                conditions were satisfied.
               </p>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <a
                   href="https://www.signaai.io/"
                   target="_blank"
@@ -257,27 +278,19 @@ function SignaAISection() {
                   rel="noreferrer"
                   className="btn btn-outline"
                 >
-                  View live demo
-                </a>
-                <a
-                  href="https://www.signaai.io/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn btn-outline"
-                >
-                  Start building
+                  Developer docs
                 </a>
               </div>
             </div>
 
-            <div className="grid gap-4">
-              <div className="rounded-3xl bg-night p-5 text-ink-100 ring-1 ring-white/10">
-                <div className="flex items-center justify-between gap-4">
+            <div className="grid gap-4 md:grid-cols-[1.05fr_0.95fr]">
+              <div className="rounded-2xl bg-night p-5 text-ink-100 ring-1 ring-white/10">
+                <div className="flex items-start justify-between gap-4">
                   <div>
                     <div className="text-xs uppercase tracking-widest text-ink-400">
                       Developer Preview
                     </div>
-                    <div className="mt-2 text-2xl font-semibold">
+                    <div className="mt-2 text-xl font-semibold">
                       pip install signaai
                     </div>
                   </div>
@@ -286,21 +299,21 @@ function SignaAISection() {
                   </div>
                 </div>
 
-                <div className="mt-5 rounded-2xl bg-black/40 p-4 font-mono text-sm text-signum-lightgreen">
+                <div className="mt-5 rounded-xl bg-black/40 p-4 font-mono text-sm text-signum-lightgreen">
                   <div>$ pip install signaai</div>
                   <div className="mt-1 text-ink-400">
-                    # build agents that can pay, prove and settle work
+                    # pay, prove and settle work on-chain
                   </div>
                 </div>
               </div>
 
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-1">
                 {layers.map((layer) => (
-                  <div key={layer.title} className="card-dark p-5">
-                    <h3 className="font-semibold text-ink-100">
+                  <div key={layer.title} className="card-dark p-4">
+                    <h3 className="text-sm font-semibold text-ink-100">
                       {layer.title}
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-300">
+                    <p className="mt-1 text-xs leading-relaxed text-ink-300">
                       {layer.text}
                     </p>
                   </div>
@@ -458,6 +471,94 @@ function Ecosystem() {
               </Link>
             );
           })}
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+function LearnSection() {
+  return (
+    <section id="learn" className="scroll-mt-16 bg-night py-20 sm:py-24">
+      <Container>
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <div className="kicker-blue">Guides, tutorials & insights</div>
+            <h2 className="mt-3 max-w-2xl text-3xl font-semibold tracking-tight text-ink-100 sm:text-4xl">
+              Short videos to get you from{" "}
+              <span className="text-signum-blue">zero</span> to{" "}
+              <span className="text-signum-blue">Signum Pro</span>.
+            </h2>
+            <p className="mt-3 max-w-2xl text-ink-300">
+              Wallet setup, getting SIGNA, mining and managing your commitment —
+              straight to the point.
+            </p>
+          </div>
+          <a
+            href="https://www.youtube.com/@signum_network"
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn-outline shrink-0"
+          >
+            More on YouTube
+          </a>
+        </div>
+
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {videos.map((v) => (
+            <a
+              key={v.href}
+              href={v.href}
+              target="_blank"
+              rel="noreferrer"
+              className="group card-dark overflow-hidden"
+            >
+              <div className="relative aspect-video overflow-hidden bg-night">
+                <img
+                  src={v.thumbnail}
+                  alt={v.title}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 grid place-items-center bg-black/30 opacity-0 transition group-hover:opacity-100">
+                  <span className="grid h-12 w-12 place-items-center rounded-full bg-signum-blue text-white">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div className="p-5">
+                <h3 className="font-semibold leading-snug text-ink-100">
+                  {v.title}
+                </h3>
+                <div className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-signum-blue">
+                  <span className="transition group-hover:translate-x-0.5">
+                    Watch
+                  </span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14M13 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </a>
+          ))}
         </div>
       </Container>
     </section>
