@@ -20,7 +20,7 @@ export default function SmartContractsPage() {
         url="https://www.signum.network/smart-contracts"
       />
       {/* HERO */}
-      <header className="relative isolate overflow-hidden border-b border-neutral-200/60 bg-signum-darkblue ">
+      <header className="relative isolate overflow-hidden border-b border-white/10 bg-signum-darkblue ">
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent" />
         <img
           src={Platine}
@@ -166,36 +166,36 @@ function SpecsBand() {
 
 function WhyDifferent() {
   return (
-    <section className="bg-white">
+    <section className="bg-night-2">
       <Container className="py-14">
-        <h2 className="text-2xl font-semibold text-signum-midnight">
+        <h2 className="text-2xl font-semibold text-ink-100-100">
           Why Signum smart contracts are different
         </h2>
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           <article className="card p-6">
-            <h3 className="font-semibold text-signum-midnight">
+            <h3 className="font-semibold text-ink-100-100">
               Self-running by design
             </h3>
-            <p className="mt-2 text-[15px] text-neutral-700">
+            <p className="mt-2 text-[15px] text-ink-100-300">
               Schedule execution at a specific block height. No external
               triggers needed — great for time-based logic like settlements and
               round ends.
             </p>
           </article>
           <article className="card p-6">
-            <h3 className="font-semibold text-signum-midnight">
+            <h3 className="font-semibold text-ink-100-100">
               Efficient & sustainable
             </h3>
-            <p className="mt-2 text-[15px] text-neutral-700">
+            <p className="mt-2 text-[15px] text-ink-100-300">
               Human-scale fees on energy-light PoC+. Predictable and affordable
               for real-world use.
             </p>
           </article>
           <article className="card p-6">
-            <h3 className="font-semibold text-signum-midnight">
+            <h3 className="font-semibold text-ink-100-100">
               On-chain finality
             </h3>
-            <p className="mt-2 text-[15px] text-neutral-700">
+            <p className="mt-2 text-[15px] text-ink-100-300">
               Contract state lives directly on chain — no sidechains or
               middleware required.
             </p>
@@ -211,10 +211,10 @@ function Framework() {
     <section id="framework" className="scroll-mt-28">
       <Container className="py-14 grid gap-10 xl:grid-cols-2 items-center">
         <div>
-          <h2 className="text-2xl font-semibold text-signum-midnight">
+          <h2 className="text-2xl font-semibold text-ink-100-100">
             A framework designed for innovative solutions
           </h2>
-          <p className="mt-3 text-neutral-700">
+          <p className="mt-3 text-ink-100-300">
             Build with languages you know. Use <strong>SmartJ (Java)</strong>{" "}
             for a clean, high-level experience, or <strong>SmartC (C)</strong>{" "}
             for compact, low-level control. Both compile to Signum’s AT bytecode
@@ -240,7 +240,7 @@ function Framework() {
           </div>
         </div>
         <div>
-          <div className="aspect-[4/3] w-full rounded-3xl bg-white ring-1 ring-black/5 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.35)] grid place-items-center overflow-hidden">
+          <div className="aspect-[4/3] w-full rounded-3xl bg-night-2 ring-1 ring-white/10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.35)] grid place-items-center overflow-hidden">
             <img
               src={SmartJC}
               alt="Java or C easy to learn"
@@ -255,10 +255,10 @@ function Framework() {
 
 function MapsSection() {
   return (
-    <section id="maps" className="scroll-mt-14 bg-white">
+    <section id="maps" className="scroll-mt-14 bg-night-2">
       <Container className="py-14 grid gap-10 xl:grid-cols-2 items-center">
         <div>
-          <div className="aspect-[4/3] w-full rounded-3xl bg-white ring-1 ring-black/5 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.35)] grid place-items-center overflow-hidden">
+          <div className="aspect-[4/3] w-full rounded-3xl bg-night-2 ring-1 ring-white/10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.35)] grid place-items-center overflow-hidden">
             <img
               src={Maps}
               alt="Persistent Maps onchain"
@@ -267,17 +267,17 @@ function MapsSection() {
           </div>
         </div>
         <div>
-          <h2 className="text-2xl font-semibold text-signum-midnight">
+          <h2 className="text-2xl font-semibold text-ink-100-100">
             Persistent Maps (SIP-38) & interoperability
           </h2>
-          <p className="mt-3 text-neutral-700">
+          <p className="mt-3 text-ink-100-300">
             With <strong>SIP-38 Maps</strong>, contracts can store and read
             arbitrary <code>(key1, key2) → value</code> entries in persistent
             storage. Contracts can also{" "}
             <strong>read maps from other contracts</strong> without sending a
             transaction.
           </p>
-          <ul className="mt-3 list-disc pl-5 text-neutral-700">
+          <ul className="mt-3 list-disc pl-5 text-ink-100-300">
             <li>Scalable participant registries</li>
             <li>Oracle-style cross-contract reads</li>
             <li>Cleaner designs for on-chain protocols</li>
@@ -300,26 +300,26 @@ function MapsSection() {
 
 function RandomnessSection() {
   return (
-    <section id="randomness" className="scroll-mt-14 bg-white">
+    <section id="randomness" className="scroll-mt-14 bg-night-2">
       <Container className="py-14 flex flex-col-reverse xl:grid gap-10 xl:grid-cols-2 items-center">
         <div>
-          <h2 className="text-2xl font-semibold text-signum-midnight">
+          <h2 className="text-2xl font-semibold text-ink-100-100">
             Fair randomness for games & lotteries
           </h2>
-          <p className="mt-3 text-neutral-700">
+          <p className="mt-3 text-ink-100-300">
             Signum contracts can derive randomness from multiple historical
             block hashes,
             <strong> mixing bits across several blocks</strong> to form a
             128-bit seed. Combined with scheduled execution at a specific block
             height, attempts to influence outcomes become unprofitable.
           </p>
-          <p className="mt-3 text-neutral-700">
+          <p className="mt-3 text-ink-100-300">
             Great for lotteries, raffles, and time-based drawings — no trusted
             oracles required.
           </p>
         </div>
         <div className="order-2 md:order-1">
-          <div className="aspect-[4/3] w-full rounded-3xl bg-white ring-1 ring-black/5 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.35)] grid place-items-center overflow-hidden">
+          <div className="aspect-[4/3] w-full rounded-3xl bg-night-2 ring-1 ring-white/10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.35)] grid place-items-center overflow-hidden">
             <img
               src={Randomness}
               alt="Fair randomness for games & lotteries"
@@ -334,13 +334,13 @@ function RandomnessSection() {
 
 function TokenAutomation() {
   return (
-    <section id="token-automation" className="scroll-mt-14 bg-white">
+    <section id="token-automation" className="scroll-mt-14 bg-night-2">
       <Container className="py-14 flex flex-col-reverse xl:grid gap-10 xl:grid-cols-2 items-center">
         <div>
-          <h2 className="text-2xl font-semibold text-signum-midnight">
+          <h2 className="text-2xl font-semibold text-ink-100-100">
             Token automation: create, mint & distribute
           </h2>
-          <p className="mt-3 text-neutral-700">
+          <p className="mt-3 text-ink-100-300">
             Contracts can create and manage Signum tokens, then automate payouts
             using the built-in <strong>“Distribute to Holders”</strong>{" "}
             transaction — capable of sending SIGNA or tokens to{" "}
@@ -361,7 +361,7 @@ function TokenAutomation() {
           </div>
         </div>
         <div>
-          <div className="aspect-[4/3] w-full rounded-3xl bg-white ring-1 ring-black/5 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.35)] grid place-items-center overflow-hidden">
+          <div className="aspect-[4/3] w-full rounded-3xl bg-night-2 ring-1 ring-white/10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.35)] grid place-items-center overflow-hidden">
             <img
               src={TokenMgmt}
               alt="Token automation"
@@ -394,14 +394,14 @@ function FAQ() {
     },
   ];
   return (
-    <section id="faq" className="scroll-mt-28 bg-white">
+    <section id="faq" className="scroll-mt-28 bg-night-2">
       <Container className="py-14">
-        <h2 className="text-2xl font-semibold text-signum-midnight">FAQ</h2>
+        <h2 className="text-2xl font-semibold text-ink-100-100">FAQ</h2>
         <div className="mt-6 grid gap-4">
           {items.map((it) => (
             <article key={it.q} className="card p-6">
-              <h3 className="font-semibold text-signum-midnight">{it.q}</h3>
-              <p className="mt-2 text-[15px] text-neutral-700">{it.a}</p>
+              <h3 className="font-semibold text-ink-100-100">{it.q}</h3>
+              <p className="mt-2 text-[15px] text-ink-100-300">{it.a}</p>
             </article>
           ))}
         </div>
@@ -443,11 +443,11 @@ function FinalCTA() {
 
 function GreenContractsSection() {
   return (
-    <section id="green-contracts" className="scroll-mt-14 bg-white">
+    <section id="green-contracts" className="scroll-mt-14 bg-night-2">
       <Container className="py-14 grid gap-10 xl:grid-cols-2 items-center">
         {/* Visual */}
         <div>
-          <div className="aspect-[4/3] w-full rounded-3xl bg-white ring-1 ring-black/5 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.35)] grid place-items-center overflow-hidden">
+          <div className="aspect-[4/3] w-full rounded-3xl bg-night-2 ring-1 ring-white/10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.35)] grid place-items-center overflow-hidden">
             <img
               src={GreenContract}
               alt="SIP-30 Green / Carbon Contracts"
@@ -457,17 +457,17 @@ function GreenContractsSection() {
         </div>
         {/* Text */}
         <div>
-          <h2 className="text-2xl font-semibold text-signum-midnight">
+          <h2 className="text-2xl font-semibold text-ink-100-100">
             Green Contracts
           </h2>
-          <p className="mt-3 text-neutral-700">
+          <p className="mt-3 text-ink-100-300">
             With <strong>SIP-30</strong>, a contract’s <em>machine code</em> can
             be referenced from an existing contract using the transaction’s{" "}
             <code>fullHash</code> instead of uploading the code again. The new
             contract reuses the original code on-chain.
           </p>
 
-          <ul className="mt-3 list-disc pl-5 text-neutral-700">
+          <ul className="mt-3 list-disc pl-5 text-ink-100-300">
             <li>
               <strong>Identical logic by reference</strong> – guarantees the
               exact same code
@@ -484,7 +484,7 @@ function GreenContractsSection() {
             </li>
           </ul>
 
-          <div className="mt-3 rounded-xl bg-signum-acqua/40 p-3 text-[13px] text-signum-midnight/80">
+          <div className="mt-3 rounded-xl bg-white/5 p-3 text-[13px] text-ink-100-100/80">
             <span className="font-medium">
               <strong>Spec note:</strong>
             </span>{" "}

@@ -104,22 +104,32 @@ export default function SignumVideoTicker({
 
   return (
     <section
-      className={`w-full bg-signum-midnight text-white ${className}`}
+      className={`w-full bg-night text-ink-100 ${className}`}
       onMouseEnter={() => pauseOnHover && setPaused(true)}
       onMouseLeave={() => pauseOnHover && setPaused(false)}
     >
       {/* Heading */}
-      <div className="mx-auto max-w-7xl px-6 pt-8">
-        <div className="text-center md:text-left">
-          <div className="text-xs font-medium tracking-widest text-white/70">
-            LEARN
+      <div className="mx-auto max-w-7xl px-6 pt-16">
+        <div className="flex flex-col gap-5 text-center sm:flex-row sm:items-end sm:justify-between sm:text-left">
+          <div>
+            <div className="text-xs font-semibold uppercase tracking-[0.25em] text-signum-blue">
+              Learn &amp; Build
+            </div>
+            <h2 className="mt-2 text-2xl sm:text-3xl font-semibold tracking-tight">
+              {title}
+            </h2>
+            {subtitle && (
+              <p className="mt-2 text-ink-300 max-w-2xl">{subtitle}</p>
+            )}
           </div>
-          <h2 className="mt-1 text-2xl sm:text-3xl font-semibold tracking-tight">
-            {title}
-          </h2>
-          {subtitle && (
-            <p className="mt-2 text-white/80 max-w-2xl">{subtitle}</p>
-          )}
+          <a
+            href="https://docs.signum.network/signum"
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn-outline shrink-0 self-center sm:self-auto"
+          >
+            View all resources
+          </a>
         </div>
       </div>
 
@@ -130,8 +140,8 @@ export default function SignumVideoTicker({
       `}</style>
 
       <div className="relative mt-4">
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-signum-midnight to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-signum-midnight to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-night to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-night to-transparent" />
 
         <div ref={viewportRef} className="overflow-hidden">
           <div
@@ -182,7 +192,7 @@ function Card({
         <img
           src={it.thumbnail}
           alt={it.title}
-          className="h-44 sm:h-48 w-full object-contain bg-white"
+          className="h-44 sm:h-48 w-full object-cover bg-night-3"
           loading="lazy"
         />
         <span className="absolute bottom-3 left-3 rounded-full bg-white/90 text-signum-midnight text-xs font-semibold px-3 py-1 shadow">

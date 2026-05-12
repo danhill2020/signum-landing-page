@@ -28,7 +28,7 @@ export default function MessagesPage() {
         url="https://www.signum.network/messages"
       />
       {/* HERO */}
-      <header className="relative isolate overflow-hidden border-b border-neutral-200/60 bg-signum-darkblue ">
+      <header className="relative isolate overflow-hidden border-b border-white/10 bg-signum-darkblue ">
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent" />
         <img
           src={Platine}
@@ -112,13 +112,13 @@ export default function MessagesPage() {
           <div className="grid gap-4 md:grid-cols-3">
             {items.map((i) => (
               <article key={i.title} className="card p-6">
-                <div className="rounded-xl bg-signum-acqua/70 p-2 text-signum-midnight/80 w-fit">
+                <div className="rounded-xl bg-white/5 p-2 text-ink-100-100/80 w-fit">
                   {i.icon}
                 </div>
-                <h3 className="mt-3 font-semibold text-signum-midnight">
+                <h3 className="mt-3 font-semibold text-ink-100-100">
                   {i.title}
                 </h3>
-                <p className="mt-2 text-[15px] text-neutral-700">{i.body}</p>
+                <p className="mt-2 text-[15px] text-ink-100-300">{i.body}</p>
               </article>
             ))}
           </div>
@@ -131,10 +131,10 @@ export default function MessagesPage() {
     return (
       <section id="what" className="scroll-mt-28">
         <Container className="py-12">
-          <h2 className="text-2xl font-semibold text-signum-midnight">
+          <h2 className="text-2xl font-semibold text-ink-100-100">
             What are Signum Messages?
           </h2>
-          <p className="mt-3 text-neutral-700">
+          <p className="mt-3 text-ink-100-300">
             Up to <strong>1,000 characters</strong> of arbitrary data per
             transaction. Messages can be <strong>public</strong> or{" "}
             <strong>encrypted</strong> for sender &amp; recipient. Since it’s
@@ -143,27 +143,27 @@ export default function MessagesPage() {
           </p>
 
           <ul className="mt-4 grid gap-3 md:grid-cols-3">
-            <li className="rounded-xl bg-white ring-1 ring-neutral-200 p-4">
-              <div className="text-sm font-medium text-signum-midnight">
+            <li className="rounded-xl bg-night-2 ring-1 ring-neutral-200 p-4">
+              <div className="text-sm font-medium text-ink-100-100">
                 Attachable or standalone
               </div>
-              <div className="text-[14px] text-neutral-700 mt-1">
+              <div className="text-[14px] text-ink-100-300 mt-1">
                 Attach to most tx types—or send message-only transactions.
               </div>
             </li>
-            <li className="rounded-xl bg-white ring-1 ring-neutral-200 p-4">
-              <div className="text-sm font-medium text-signum-midnight">
+            <li className="rounded-xl bg-night-2 ring-1 ring-neutral-200 p-4">
+              <div className="text-sm font-medium text-ink-100-100">
                 Choose visibility
               </div>
-              <div className="text-[14px] text-neutral-700 mt-1">
+              <div className="text-[14px] text-ink-100-300 mt-1">
                 Public or encrypted (sender ↔ recipient).
               </div>
             </li>
-            <li className="rounded-xl bg-white ring-1 ring-neutral-200 p-4">
-              <div className="text-sm font-medium text-signum-midnight">
+            <li className="rounded-xl bg-night-2 ring-1 ring-neutral-200 p-4">
+              <div className="text-sm font-medium text-ink-100-100">
                 Flexible payloads
               </div>
-              <div className="text-[14px] text-neutral-700 mt-1">
+              <div className="text-[14px] text-ink-100-300 mt-1">
                 Any format or structure that suits your app.
               </div>
             </li>
@@ -210,23 +210,23 @@ export default function MessagesPage() {
     return (
       <section id="use-cases" className="scroll-mt-28">
         <Container className="py-12">
-          <h2 className="text-2xl font-semibold text-signum-midnight">
+          <h2 className="text-2xl font-semibold text-ink-100-100">
             Popular use cases
           </h2>
-          <p className="mt-2 text-neutral-700">
+          <p className="mt-2 text-ink-100-300">
             From customer notes to DApp workflows—keep everything connected.
           </p>
 
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {cards.map((c) => (
               <article key={c.title} className="card p-6 h-full">
-                <div className="rounded-xl bg-signum-acqua/70 p-2 text-signum-midnight/80 w-fit">
+                <div className="rounded-xl bg-white/5 p-2 text-ink-100-100/80 w-fit">
                   {c.icon}
                 </div>
-                <h3 className="mt-3 font-semibold text-signum-midnight">
+                <h3 className="mt-3 font-semibold text-ink-100-100">
                   {c.title}
                 </h3>
-                <p className="mt-2 text-[15px] text-neutral-700">{c.body}</p>
+                <p className="mt-2 text-[15px] text-ink-100-300">{c.body}</p>
               </article>
             ))}
           </div>
@@ -257,23 +257,23 @@ export default function MessagesPage() {
     return (
       <section id="how" className="scroll-mt-28">
         <Container className="py-12">
-          <h2 className="text-2xl font-semibold text-signum-midnight">
+          <h2 className="text-2xl font-semibold text-ink-100-100">
             How it works
           </h2>
-          <p className="mt-2 text-neutral-700">
+          <p className="mt-2 text-ink-100-300">
             Three simple steps—then your message is stored immutably on-chain.
           </p>
 
           <div className="mt-6 grid gap-4 md:grid-cols-3">
             {steps.map((s) => (
               <article key={s.n} className="card p-6">
-                <div className="text-xs font-medium text-neutral-500">
+                <div className="text-xs font-medium text-ink-100-400">
                   Step {s.n}
                 </div>
-                <h3 className="mt-1 font-semibold text-signum-midnight">
+                <h3 className="mt-1 font-semibold text-ink-100-100">
                   {s.title}
                 </h3>
-                <p className="mt-2 text-[15px] text-neutral-700">{s.body}</p>
+                <p className="mt-2 text-[15px] text-ink-100-300">{s.body}</p>
               </article>
             ))}
           </div>
@@ -323,10 +323,10 @@ export default function MessagesPage() {
     return (
       <section id="get-sig" className="py-24">
         <Container className="text-center">
-          <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-signum-midnight">
+          <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-ink-100-100">
             Start with SIGNA today
           </h2>
-          <p className="mt-4 text-signum-midnight max-w-xl mx-auto">
+          <p className="mt-4 text-ink-100-100 max-w-xl mx-auto">
             Download a wallet, get SIGNA, and join a community building
             practical crypto—without the noise.
           </p>
@@ -341,7 +341,7 @@ export default function MessagesPage() {
             <Link
               to="/exchanges"
               key="exchanges"
-              className="rounded-full border border-neutral-300 px-6 py-3 text-sm font-medium hover:bg-neutral-50"
+              className="rounded-full border border-white/15 px-6 py-3 text-sm font-medium hover:bg-night-2"
             >
               Get SIGNA
             </Link>

@@ -25,7 +25,7 @@ export default function AliasesPage() {
       />
 
       {/* HERO */}
-      <header className="relative isolate overflow-hidden border-b border-neutral-200/60 bg-signum-darkblue ">
+      <header className="relative isolate overflow-hidden border-b border-white/10 bg-signum-darkblue ">
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent" />
         <img
           src={Platine}
@@ -212,16 +212,16 @@ function WhatAreAliases() {
   return (
     <section>
       <Container className="py-14">
-        <h2 className="text-2xl font-semibold text-signum-midnight">
+        <h2 className="text-2xl font-semibold text-ink-100-100">
           What are Signum Aliases?
         </h2>
-        <p className="mt-3 text-neutral-700 max-w-3xl">
+        <p className="mt-3 text-ink-100-300 max-w-3xl">
           Ease of use is at the core of Signum. Aliases are unique,
           human-friendly names stored on-chain that can represent a Signum
           account or a piece of data. Instead of sharing long identifiers, you
           can share a readable name and decide what it points to.
         </p>
-        <p className="mt-3 text-neutral-700 max-w-3xl">
+        <p className="mt-3 text-ink-100-300 max-w-3xl">
           Aliases are native features of the Signum blockchain — you can create
           them, update them, transfer them, and even sell them.
         </p>
@@ -257,10 +257,10 @@ function WhatCanAnAliasBe() {
   return (
     <section>
       <Container className="py-14">
-        <h2 className="text-2xl font-semibold text-signum-midnight">
+        <h2 className="text-2xl font-semibold text-ink-100-100">
           What can an alias be?
         </h2>
-        <p className="mt-3 text-neutral-700 max-w-3xl">
+        <p className="mt-3 text-ink-100-300 max-w-3xl">
           An alias is a flexible on-chain pointer. Choose what it represents and
           update it anytime.
         </p>
@@ -269,14 +269,12 @@ function WhatCanAnAliasBe() {
           {items.map((it) => (
             <article key={it.title} className="card p-6">
               <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-2xl bg-neutral-100 ring-1 ring-black/5 grid place-items-center">
-                  <it.icon className="h-5 w-5 text-signum-midnight" />
+                <div className="h-10 w-10 rounded-2xl bg-night-3 ring-1 ring-white/10 grid place-items-center">
+                  <it.icon className="h-5 w-5 text-ink-100-100" />
                 </div>
-                <h3 className="font-semibold text-signum-midnight">
-                  {it.title}
-                </h3>
+                <h3 className="font-semibold text-ink-100-100">{it.title}</h3>
               </div>
-              <p className="mt-3 text-[15px] text-neutral-700">{it.text}</p>
+              <p className="mt-3 text-[15px] text-ink-100-300">{it.text}</p>
             </article>
           ))}
         </div>
@@ -287,23 +285,23 @@ function WhatCanAnAliasBe() {
 
 function Sip48() {
   return (
-    <section id="sip-48" className="scroll-mt-28 bg-white">
+    <section id="sip-48" className="scroll-mt-28 bg-night-2">
       <Container className="py-14 grid gap-10 md:grid-cols-2 items-start">
         <div>
-          <h2 className="text-2xl font-semibold text-signum-midnight">
+          <h2 className="text-2xl font-semibold text-ink-100-100">
             Modernized aliases with SIP-48
           </h2>
-          <p className="mt-3 text-neutral-700">
+          <p className="mt-3 text-ink-100-300">
             SIP-48 modernizes the alias system to better match real-world naming
             and future use cases — including domains and application naming. It
             introduces a broader naming format, adds top-level namespaces
             (STLDs), and brings a renewal model comparable to web domains.
           </p>
 
-          <ul className="mt-4 space-y-3 text-neutral-700">
+          <ul className="mt-4 space-y-3 text-ink-100-300">
             <li className="flex gap-3">
               <span className="mt-1">
-                <AtSign className="h-4 w-4 text-signum-midnight" />
+                <AtSign className="h-4 w-4 text-ink-100-100" />
               </span>
               <span>
                 <strong>New allowed character:</strong> underscore{" "}
@@ -312,7 +310,7 @@ function Sip48() {
             </li>
             <li className="flex gap-3">
               <span className="mt-1">
-                <Tag className="h-4 w-4 text-signum-midnight" />
+                <Tag className="h-4 w-4 text-ink-100-100" />
               </span>
               <span>
                 <strong>Namespaces (STLDs):</strong> register names under
@@ -321,7 +319,7 @@ function Sip48() {
             </li>
             <li className="flex gap-3">
               <span className="mt-1">
-                <Clock className="h-4 w-4 text-signum-midnight" />
+                <Clock className="h-4 w-4 text-ink-100-100" />
               </span>
               <span>
                 <strong>Renewal model:</strong> new aliases can renew
@@ -351,31 +349,31 @@ function Sip48() {
         </div>
 
         <div className="card p-6">
-          <h3 className="font-semibold text-signum-midnight">
+          <h3 className="font-semibold text-ink-100-100">
             A naming layer you can actually share
           </h3>
-          <p className="mt-2 text-[15px] text-neutral-700">
+          <p className="mt-2 text-[15px] text-ink-100-300">
             Aliases make addresses and on-chain records easier to use — while
             staying verifiable and transferable. With STLDs, the same name can
             exist under different namespaces.
           </p>
 
-          <div className="mt-4 rounded-2xl bg-neutral-50 ring-1 ring-neutral-200/70 p-4">
-            <div className="text-sm text-neutral-600">Example namespaces</div>
+          <div className="mt-4 rounded-2xl bg-night-2 ring-1 ring-neutral-200/70 p-4">
+            <div className="text-sm text-ink-100-300">Example namespaces</div>
             <div className="mt-2 flex flex-wrap gap-2 font-mono text-sm">
-              <span className="rounded-xl bg-white ring-1 ring-neutral-200/70 px-3 py-1">
+              <span className="rounded-xl bg-night-2 ring-1 ring-neutral-200/70 px-3 py-1">
                 spaceship.signum
               </span>
-              <span className="rounded-xl bg-white ring-1 ring-neutral-200/70 px-3 py-1">
+              <span className="rounded-xl bg-night-2 ring-1 ring-neutral-200/70 px-3 py-1">
                 spaceship.crypto
               </span>
-              <span className="rounded-xl bg-white ring-1 ring-neutral-200/70 px-3 py-1">
+              <span className="rounded-xl bg-night-2 ring-1 ring-neutral-200/70 px-3 py-1">
                 spaceship.wallet
               </span>
             </div>
           </div>
 
-          <div className="mt-4 rounded-xl bg-signum-acqua/40 p-3 text-[13px] text-signum-midnight/80">
+          <div className="mt-4 rounded-xl bg-white/5 p-3 text-[13px] text-ink-100-100/80">
             <strong>Legacy note:</strong> aliases registered before SIP-48
             activation remain with the current owner without renewals unless
             they are updated or sold later.
@@ -388,50 +386,48 @@ function Sip48() {
 
 function Stlds() {
   return (
-    <section id="stlds" className="scroll-mt-28 bg-white">
+    <section id="stlds" className="scroll-mt-28 bg-night-2">
       <Container className="py-14">
-        <h2 className="text-2xl font-semibold text-signum-midnight">
+        <h2 className="text-2xl font-semibold text-ink-100-100">
           STLDs (Signum Top-Level Domains)
         </h2>
-        <p className="mt-3 text-neutral-700 max-w-3xl">
+        <p className="mt-3 text-ink-100-300 max-w-3xl">
           SIP-48 adds STLDs — Signum top-level domains — so the same name can
           exist under different namespaces (similar to domains on the web).
         </p>
 
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           <article className="card p-6">
-            <h3 className="font-semibold text-signum-midnight">
-              Default behavior
-            </h3>
-            <p className="mt-2 text-[15px] text-neutral-700">
+            <h3 className="font-semibold text-ink-100-100">Default behavior</h3>
+            <p className="mt-2 text-[15px] text-ink-100-300">
               Aliases created without selecting an STLD (including all legacy
               aliases created before SIP-48 activates) use{" "}
               <strong>.signum</strong> for free.
             </p>
 
-            <div className="mt-4 rounded-2xl bg-neutral-50 ring-1 ring-neutral-200/70 p-4">
-              <div className="text-sm text-neutral-600">Examples</div>
+            <div className="mt-4 rounded-2xl bg-night-2 ring-1 ring-neutral-200/70 p-4">
+              <div className="text-sm text-ink-100-300">Examples</div>
 
               <div className="mt-3">
-                <div className="text-[13px] text-neutral-600">
+                <div className="text-[13px] text-ink-100-300">
                   Register <strong>“Spaceship”</strong> (no STLD):
                 </div>
                 <div className="mt-2 flex flex-wrap gap-2 font-mono text-sm">
-                  <span className="rounded-xl bg-white ring-1 ring-neutral-200/70 px-3 py-1">
+                  <span className="rounded-xl bg-night-2 ring-1 ring-neutral-200/70 px-3 py-1">
                     Spaceship
                   </span>
-                  <span className="rounded-xl bg-white ring-1 ring-neutral-200/70 px-3 py-1">
+                  <span className="rounded-xl bg-night-2 ring-1 ring-neutral-200/70 px-3 py-1">
                     Spaceship.signum
                   </span>
                 </div>
               </div>
 
               <div className="mt-4">
-                <div className="text-[13px] text-neutral-600">
+                <div className="text-[13px] text-ink-100-300">
                   Register <strong>“Spaceship.crypto”</strong>:
                 </div>
                 <div className="mt-2 flex flex-wrap gap-2 font-mono text-sm">
-                  <span className="rounded-xl bg-white ring-1 ring-neutral-200/70 px-3 py-1">
+                  <span className="rounded-xl bg-night-2 ring-1 ring-neutral-200/70 px-3 py-1">
                     Spaceship.crypto
                   </span>
                 </div>
@@ -440,10 +436,10 @@ function Stlds() {
           </article>
 
           <article className="card p-6">
-            <h3 className="font-semibold text-signum-midnight">
+            <h3 className="font-semibold text-ink-100-100">
               Default STLDs provided by Signum
             </h3>
-            <p className="mt-2 text-[15px] text-neutral-700">
+            <p className="mt-2 text-[15px] text-ink-100-300">
               The following namespaces are available by default:
             </p>
 
@@ -451,14 +447,14 @@ function Stlds() {
               {DEFAULT_STLDS.map((tld) => (
                 <span
                   key={tld}
-                  className="rounded-xl bg-neutral-100 px-3 py-1 text-sm text-neutral-800 ring-1 ring-black/5"
+                  className="rounded-xl bg-night-3 px-3 py-1 text-sm text-ink-100-200 ring-1 ring-white/10"
                 >
                   .{tld}
                 </span>
               ))}
             </div>
 
-            <div className="mt-4 rounded-xl bg-signum-acqua/40 p-3 text-[13px] text-signum-midnight/80">
+            <div className="mt-4 rounded-xl bg-white/5 p-3 text-[13px] text-ink-100-100/80">
               <strong>Custom STLDs:</strong> Signum accounts can create new
               namespaces on-chain. If an alias uses a custom STLD, renewals can
               be distributed to the current STLD owner.
@@ -483,25 +479,25 @@ function Stlds() {
 
 function Renewal() {
   return (
-    <section id="renewal" className="scroll-mt-28 bg-white">
+    <section id="renewal" className="scroll-mt-28 bg-night-2">
       <Container className="py-14">
-        <h2 className="text-2xl font-semibold text-signum-midnight">
+        <h2 className="text-2xl font-semibold text-ink-100-100">
           Renewal & expiration
         </h2>
-        <p className="mt-3 text-neutral-700 max-w-3xl">
+        <p className="mt-3 text-ink-100-300 max-w-3xl">
           With SIP-48, newly registered aliases become tied to a renewal
           subscription.
         </p>
-        <p className="text-neutral-700 max-w-3xl">
+        <p className="text-ink-100-300 max-w-3xl">
           Ownership stays active as long as renewals succeed.
         </p>
 
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           <article className="card p-6">
-            <h3 className="font-semibold text-signum-midnight">
+            <h3 className="font-semibold text-ink-100-100">
               Renewal subscription
             </h3>
-            <p className="mt-2 text-[15px] text-neutral-700">
+            <p className="mt-2 text-[15px] text-ink-100-300">
               When a new alias is registered, a subscription is created with a{" "}
               <strong>3-month deadline</strong> and a renewal amount of{" "}
               <strong>12.5 SIGNA</strong>.
@@ -509,36 +505,34 @@ function Renewal() {
           </article>
 
           <article className="card p-6">
-            <h3 className="font-semibold text-signum-midnight">
-              If renewal fails
-            </h3>
-            <p className="mt-2 text-[15px] text-neutral-700">
+            <h3 className="font-semibold text-ink-100-100">If renewal fails</h3>
+            <p className="mt-2 text-[15px] text-ink-100-300">
               If the owner does not have enough balance when renewal runs, the
               alias is <strong>deleted</strong> and becomes available again.
             </p>
           </article>
 
           <article className="card p-6">
-            <h3 className="font-semibold text-signum-midnight">
+            <h3 className="font-semibold text-ink-100-100">
               If renewal is cancelled
             </h3>
-            <p className="mt-2 text-[15px] text-neutral-700">
+            <p className="mt-2 text-[15px] text-ink-100-300">
               If the owner cancels the renewal subscription, the alias is{" "}
               <strong>deleted</strong> and becomes available again.
             </p>
           </article>
         </div>
 
-        <div className="mt-6 rounded-xl bg-neutral-50 ring-1 ring-neutral-200/70 p-5">
+        <div className="mt-6 rounded-xl bg-night-2 ring-1 ring-neutral-200/70 p-5">
           <div className="flex items-start gap-3">
-            <div className="mt-0.5 h-10 w-10 rounded-2xl bg-white ring-1 ring-neutral-200/70 grid place-items-center">
-              <RefreshCcw className="h-5 w-5 text-signum-midnight" />
+            <div className="mt-0.5 h-10 w-10 rounded-2xl bg-night-2 ring-1 ring-neutral-200/70 grid place-items-center">
+              <RefreshCcw className="h-5 w-5 text-ink-100-100" />
             </div>
             <div>
-              <h3 className="font-semibold text-signum-midnight">
+              <h3 className="font-semibold text-ink-100-100">
                 Sales keep the deadline
               </h3>
-              <p className="mt-1 text-[15px] text-neutral-700">
+              <p className="mt-1 text-[15px] text-ink-100-300">
                 If an alias with an active subscription is sold, the
                 subscription transfers to the new owner with the{" "}
                 <strong>current deadline</strong>.
@@ -553,12 +547,12 @@ function Renewal() {
 
 function LegacyAliases() {
   return (
-    <section id="legacy" className="scroll-mt-28 bg-white">
+    <section id="legacy" className="scroll-mt-28 bg-night-2">
       <Container className="py-14">
-        <h2 className="text-2xl font-semibold text-signum-midnight">
+        <h2 className="text-2xl font-semibold text-ink-100-100">
           Legacy aliases stay protected
         </h2>
-        <p className="mt-3 text-neutral-700 max-w-3xl">
+        <p className="mt-3 text-ink-100-300 max-w-3xl">
           Aliases registered before SIP-48 activates remain with their current
           owner <strong>without any renewal fee</strong>. A renewal subscription
           for a legacy alias is only created once that alias is{" "}
@@ -571,13 +565,13 @@ function LegacyAliases() {
 
 function TransferTrading() {
   return (
-    <section id="transfer" className="scroll-mt-28 bg-white">
+    <section id="transfer" className="scroll-mt-28 bg-night-2">
       <Container className="py-14 grid gap-10 md:grid-cols-2 items-start">
         <div>
-          <h2 className="text-2xl font-semibold text-signum-midnight">
+          <h2 className="text-2xl font-semibold text-ink-100-100">
             Transfer, sell, or trade aliases
           </h2>
-          <p className="mt-3 text-neutral-700">
+          <p className="mt-3 text-ink-100-300">
             Aliases can be transferred or offered for sale — publicly or
             privately — and remain a powerful “digital pointer” that can change
             hands.
@@ -596,10 +590,10 @@ function TransferTrading() {
         </div>
 
         <div className="card p-6">
-          <h3 className="font-semibold text-signum-midnight">
+          <h3 className="font-semibold text-ink-100-100">
             Special case: private sale for zero
           </h3>
-          <p className="mt-2 text-[15px] text-neutral-700">
+          <p className="mt-2 text-[15px] text-ink-100-300">
             If an alias is transferred via a{" "}
             <strong>private sale with price 0</strong>, it is transferred
             immediately. The renewal subscription remains on the former owner
@@ -609,7 +603,7 @@ function TransferTrading() {
             again.
           </p>
 
-          <div className="mt-4 rounded-xl bg-signum-acqua/40 p-3 text-[13px] text-signum-midnight/80">
+          <div className="mt-4 rounded-xl bg-white/5 p-3 text-[13px] text-ink-100-100/80">
             <strong>Tip:</strong> after receiving an alias, update it once to
             ensure renewals are tied to your account going forward.
           </div>
@@ -621,16 +615,16 @@ function TransferTrading() {
 
 function GettingStarted() {
   return (
-    <section id="getting-started" className="scroll-mt-28 bg-white">
+    <section id="getting-started" className="scroll-mt-28 bg-night-2">
       <Container className="py-14">
-        <h2 className="text-2xl font-semibold text-signum-midnight">
+        <h2 className="text-2xl font-semibold text-ink-100-100">
           Get started in minutes
         </h2>
 
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           <article className="card p-6">
-            <h3 className="font-semibold text-signum-midnight">Quick steps</h3>
-            <ol className="mt-3 space-y-2 text-[15px] text-neutral-700 list-decimal pl-5">
+            <h3 className="font-semibold text-ink-100-100">Quick steps</h3>
+            <ol className="mt-3 space-y-2 text-[15px] text-ink-100-300 list-decimal pl-5">
               <li>Open a Signum wallet / account</li>
               <li>Search for an available name</li>
               <li>Choose what it points to: account, URL, or text record</li>
@@ -697,14 +691,14 @@ function FAQ() {
   ];
 
   return (
-    <section id="faq" className="scroll-mt-28 bg-white">
+    <section id="faq" className="scroll-mt-28 bg-night-2">
       <Container className="py-14">
-        <h2 className="text-2xl font-semibold text-signum-midnight">FAQ</h2>
+        <h2 className="text-2xl font-semibold text-ink-100-100">FAQ</h2>
         <div className="mt-6 grid gap-4">
           {items.map((it) => (
             <article key={it.q} className="card p-6">
-              <h3 className="font-semibold text-signum-midnight">{it.q}</h3>
-              <p className="mt-2 text-[15px] text-neutral-700">{it.a}</p>
+              <h3 className="font-semibold text-ink-100-100">{it.q}</h3>
+              <p className="mt-2 text-[15px] text-ink-100-300">{it.a}</p>
             </article>
           ))}
         </div>

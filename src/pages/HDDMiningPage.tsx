@@ -156,7 +156,7 @@ export default function HDDMiningPage() {
       />
 
       {/* HERO */}
-      <header className="relative isolate overflow-hidden border-b border-neutral-200/60 bg-signum-blue">
+      <header className="relative isolate overflow-hidden border-b border-white/10 bg-signum-blue">
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent" />
 
         <img
@@ -274,7 +274,7 @@ function OnThisPage() {
 
   return (
     <nav aria-label="On this page" className="card p-4 sticky top-24">
-      <div className="mb-2 text-xs font-medium uppercase tracking-wide text-neutral-600">
+      <div className="mb-2 text-xs font-medium uppercase tracking-wide text-ink-100-300">
         On this page
       </div>
       <ul className="space-y-1 text-sm">
@@ -282,7 +282,7 @@ function OnThisPage() {
           <li key={i.href}>
             <a
               href={i.href}
-              className="block rounded-lg px-2 py-1 text-neutral-700 hover:text-neutral-900 hover:bg-signum-acqua"
+              className="block rounded-lg px-2 py-1 text-ink-100-300 hover:text-ink-100-100 hover:bg-white/5"
             >
               {i.label}
             </a>
@@ -297,11 +297,11 @@ function OnThisPage() {
 function WhatIsHDDMining() {
   return (
     <section id="what-is-hdd-mining" className="scroll-mt-28">
-      <h2 className="text-2xl font-semibold text-signum-midnight">
+      <h2 className="text-2xl font-semibold text-ink-100-100">
         What is HDD mining (hard drive mining)?
       </h2>
 
-      <div className="mt-2 space-y-3 text-neutral-700 text-[15px]">
+      <div className="mt-2 space-y-3 text-ink-100-300 text-[15px]">
         <p>
           <strong>HDD mining</strong> (hard drive mining) is a method of
           securing a blockchain using <strong>disk space</strong> instead of
@@ -342,11 +342,11 @@ function WhatIsHDDMining() {
 function WhySignum() {
   return (
     <section id="why-signum" className="scroll-mt-28">
-      <h2 className="text-2xl font-semibold text-signum-midnight">
+      <h2 className="text-2xl font-semibold text-ink-100-100">
         Why mine with Signum?
       </h2>
 
-      <p className="mt-2 text-neutral-600">
+      <p className="mt-2 text-ink-100-300">
         If you’re searching “hdd mining”, you’re probably looking for something
         practical: simple setup, low power, and a network where storage actually
         matters.
@@ -355,18 +355,18 @@ function WhySignum() {
       <div className="mt-4 grid gap-4 xl:grid-cols-2">
         <div className="card p-5">
           <div className="flex items-start gap-3">
-            <div className="rounded-xl bg-signum-acqua/70 p-2 text-signum-midnight/80">
+            <div className="rounded-xl bg-white/5 p-2 text-ink-100-100/80">
               <Cpu className="h-5 w-5" />
             </div>
             <div>
-              <h3 className="font-semibold text-signum-midnight">
+              <h3 className="font-semibold text-ink-100-100">
                 PoC+ built for long-term miners
               </h3>
-              <p className="text-neutral-700 text-[15px] mt-1">
+              <p className="text-ink-100-300 text-[15px] mt-1">
                 Signum’s Proof of Capacity evolution improves incentive
                 alignment and supports a stable mining ecosystem.
               </p>
-              <p className="mt-2 text-sm text-neutral-600">
+              <p className="mt-2 text-sm text-ink-100-300">
                 Learn more:{" "}
                 <LinkOut href="https://www.signum.network/poc-plus">
                   PoC+
@@ -378,18 +378,18 @@ function WhySignum() {
 
         <div className="card p-5">
           <div className="flex items-start gap-3">
-            <div className="rounded-xl bg-signum-acqua/70 p-2 text-signum-midnight/80">
+            <div className="rounded-xl bg-white/5 p-2 text-ink-100-100/80">
               <HardDrive className="h-5 w-5" />
             </div>
             <div>
-              <h3 className="font-semibold text-signum-midnight">
+              <h3 className="font-semibold text-ink-100-100">
                 Use what you already have
               </h3>
-              <p className="text-neutral-700 text-[15px] mt-1">
+              <p className="text-ink-100-300 text-[15px] mt-1">
                 Mine on a PC, a NAS, a Raspberry Pi — even low-power setups work
                 well once plots exist.
               </p>
-              <p className="mt-2 text-sm text-neutral-600">
+              <p className="mt-2 text-sm text-ink-100-300">
                 Quick start below or jump to the{" "}
                 <a className="underline underline-offset-4" href="#calculator">
                   calculator
@@ -408,10 +408,10 @@ function WhySignum() {
 function QuickStart() {
   return (
     <section id="quickstart" className="scroll-mt-28">
-      <h2 className="text-2xl font-semibold text-signum-midnight">
+      <h2 className="text-2xl font-semibold text-ink-100-100">
         Start HDD mining (pool or solo)
       </h2>
-      <p className="mt-1 text-neutral-600">
+      <p className="mt-1 text-ink-100-300">
         Choose a path — pool is recommended for beginners.
       </p>
 
@@ -424,7 +424,7 @@ function QuickStart() {
         />
       </div>
 
-      <div className="mt-4 text-sm text-neutral-600">
+      <div className="mt-4 text-sm text-ink-100-300">
         Want the most detailed docs?{" "}
         <LinkOut href="https://docs.signum.network/signum/signum-mining">
           Signum mining documentation
@@ -519,10 +519,10 @@ function Requirements() {
 
   return (
     <section id="requirements" className="scroll-mt-28">
-      <h2 className="text-2xl font-semibold text-signum-midnight">
+      <h2 className="text-2xl font-semibold text-ink-100-100">
         Hardware & requirements for HDD mining
       </h2>
-      <p className="mt-1 text-neutral-600">
+      <p className="mt-1 text-ink-100-300">
         HDD mining runs on what you already have — the main “upgrade” is more
         disk space.
       </p>
@@ -531,21 +531,19 @@ function Requirements() {
         {items.map((it) => (
           <div key={it.title} className="card p-5">
             <div className="flex items-start gap-3">
-              <div className="rounded-xl bg-signum-acqua/70 p-2 text-signum-midnight/80">
+              <div className="rounded-xl bg-white/5 p-2 text-ink-100-100/80">
                 {it.icon}
               </div>
               <div>
-                <h3 className="font-semibold text-signum-midnight">
-                  {it.title}
-                </h3>
-                <p className="text-neutral-700 text-[15px]">{it.text}</p>
+                <h3 className="font-semibold text-ink-100-100">{it.title}</h3>
+                <p className="text-ink-100-300 text-[15px]">{it.text}</p>
               </div>
             </div>
           </div>
         ))}
       </div>
 
-      <p className="mt-3 text-sm text-neutral-600">
+      <p className="mt-3 text-sm text-ink-100-300">
         Learn more in the docs:{" "}
         <LinkOut href="https://docs.signum.network/signum/requirements">
           Requirements
@@ -559,10 +557,10 @@ function Requirements() {
 function Plotting() {
   return (
     <section id="plotting" className="scroll-mt-28">
-      <h2 className="text-2xl font-semibold text-signum-midnight">
+      <h2 className="text-2xl font-semibold text-ink-100-100">
         Plotting for HDD mining
       </h2>
-      <p className="mt-1 text-neutral-600">
+      <p className="mt-1 text-ink-100-300">
         Plot once — mine for the long run. Plotting creates the files that your
         disks will use during PoC mining.
       </p>
@@ -570,18 +568,16 @@ function Plotting() {
       <div className="mt-4 grid gap-4 xl:grid-cols-2">
         <div className="card p-5">
           <div className="flex items-start gap-3">
-            <div className="rounded-xl bg-signum-acqua/70 p-2 text-signum-midnight/80">
+            <div className="rounded-xl bg-white/5 p-2 text-ink-100-100/80">
               <FileText className="h-5 w-5" />
             </div>
             <div>
-              <h3 className="font-semibold text-signum-midnight">
-                Simple (GUI)
-              </h3>
-              <p className="mt-1 text-neutral-700 text-[15px]">
+              <h3 className="font-semibold text-ink-100-100">Simple (GUI)</h3>
+              <p className="mt-1 text-ink-100-300 text-[15px]">
                 Friendly setup with a graphical plotter. You can keep using your
                 machine while plotting.
               </p>
-              <p className="mt-3 text-sm text-neutral-600">
+              <p className="mt-3 text-sm text-ink-100-300">
                 Guide:{" "}
                 <LinkOut href="https://docs.signum.network/signum/plotting">
                   Plotting (GUI)
@@ -593,18 +589,16 @@ function Plotting() {
 
         <div className="card p-5">
           <div className="flex items-start gap-3">
-            <div className="rounded-xl bg-signum-acqua/70 p-2 text-signum-midnight/80">
+            <div className="rounded-xl bg-white/5 p-2 text-ink-100-100/80">
               <TerminalIcon />
             </div>
             <div>
-              <h3 className="font-semibold text-signum-midnight">
-                Advanced (CLI)
-              </h3>
-              <p className="mt-1 text-neutral-700 text-[15px]">
+              <h3 className="font-semibold text-ink-100-100">Advanced (CLI)</h3>
+              <p className="mt-1 text-ink-100-300 text-[15px]">
                 Prefer the terminal? Use the CLI plotter for batching and
                 maximum control.
               </p>
-              <p className="mt-3 text-sm text-neutral-600">
+              <p className="mt-3 text-sm text-ink-100-300">
                 Guide:{" "}
                 <LinkOut href="https://docs.signum.network/signum/plotting">
                   Plotting (CLI)
@@ -615,7 +609,7 @@ function Plotting() {
         </div>
       </div>
 
-      <div className="mt-4 text-sm text-neutral-600">
+      <div className="mt-4 text-sm text-ink-100-300">
         Tip: For best results, avoid interrupting plotting jobs and ensure your
         destination HDD has healthy SMART values.
       </div>
@@ -627,10 +621,10 @@ function Plotting() {
 function Configure() {
   return (
     <section id="configure" className="scroll-mt-28">
-      <h2 className="text-2xl font-semibold text-signum-midnight">
+      <h2 className="text-2xl font-semibold text-ink-100-100">
         Configure & start HDD mining
       </h2>
-      <p className="mt-1 text-neutral-600">
+      <p className="mt-1 text-ink-100-300">
         Point your miner to a pool (recommended) or your own node (solo), then
         start earning.
       </p>
@@ -704,18 +698,18 @@ function Commitment() {
       <div className="card p-6">
         <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-4">
           <div>
-            <h2 className="text-2xl font-semibold text-signum-midnight">
+            <h2 className="text-2xl font-semibold text-ink-100-100">
               Commitment boosts effective capacity (PoC+)
             </h2>
-            <p className="mt-1 text-neutral-700 text-[15px]">
+            <p className="mt-1 text-ink-100-300 text-[15px]">
               Add a SIGNA commitment to boost your{" "}
               <strong>effective capacity</strong>.
             </p>
-            <p className="mt-1 text-neutral-700 text-[15px]">
+            <p className="mt-1 text-ink-100-300 text-[15px]">
               Match the network average for <strong>1×</strong>. Go higher to
               unlock up to <strong>8×</strong>.
             </p>
-            <p className="mt-2 text-sm text-neutral-600">
+            <p className="mt-2 text-sm text-ink-100-300">
               Learn more:{" "}
               <LinkOut href="https://docs.signum.network/signum/adding-commitment">
                 Adding commitment
@@ -751,7 +745,7 @@ function Commitment() {
 
 function CTACommitment() {
   return (
-    <div className="-mt-10 bg-gradient-to-b from-signum-acqua/40 to-white text-signum-midnight">
+    <div className="-mt-10 bg-gradient-to-b from-night-2 to-night text-ink-100-100">
       <section className="pt-6 pb-12">
         <div className="mx-auto max-w-5xl">
           <h2 className="text-3xl font-semibold text-center mb-8">
@@ -776,7 +770,7 @@ function CTACommitment() {
 function CalculatorSection() {
   return (
     <section id="calculator" className="scroll-mt-28 mb-0">
-      <h2 className="text-2xl font-semibold text-signum-midnight text-center">
+      <h2 className="text-2xl font-semibold text-ink-100-100 text-center">
         HDD mining calculator
       </h2>
       <div className="mt-4">
@@ -790,17 +784,17 @@ function CalculatorSection() {
 function PoolsAndNetwork() {
   return (
     <section id="pools" className="scroll-mt-28">
-      <h2 className="text-2xl font-semibold text-signum-midnight">
+      <h2 className="text-2xl font-semibold text-ink-100-100">
         Pools & network
       </h2>
 
       <div className="mt-4 grid gap-4 lx:grid-cols-2">
         <div className="card p-5">
-          <h3 className="font-semibold text-signum-midnight">Find a pool</h3>
-          <p className="mt-1 text-neutral-700 text-[15px]">
+          <h3 className="font-semibold text-ink-100-100">Find a pool</h3>
+          <p className="mt-1 text-ink-100-300 text-[15px]">
             Choose a pool that fits your preferences and payout style.
           </p>
-          <p className="mt-3 text-sm text-neutral-600">
+          <p className="mt-3 text-sm text-ink-100-300">
             <LinkOut href="https://docs.signum.network/signum/signum-pools-list">
               Pool list
             </LinkOut>
@@ -808,11 +802,11 @@ function PoolsAndNetwork() {
         </div>
 
         <div className="card p-5">
-          <h3 className="font-semibold text-signum-midnight">Network stats</h3>
-          <p className="mt-1 text-neutral-700 text-[15px]">
+          <h3 className="font-semibold text-ink-100-100">Network stats</h3>
+          <p className="mt-1 text-ink-100-300 text-[15px]">
             Explore the chain: blocks, accounts, miners and more.
           </p>
-          <div className="mt-3 flex gap-3 text-sm text-neutral-600">
+          <div className="mt-3 flex gap-3 text-sm text-ink-100-300">
             <LinkOut href="https://explorer.signum.network">Explorer</LinkOut>
             <span>•</span>
             <LinkOut href="https://stats.signum.network/miner/">
@@ -864,8 +858,8 @@ function Glossary() {
 
   return (
     <section id="glossary" className="scroll-mt-28">
-      <h2 className="text-2xl font-semibold text-signum-midnight">Glossary</h2>
-      <p className="mt-1 text-neutral-600">
+      <h2 className="text-2xl font-semibold text-ink-100-100">Glossary</h2>
+      <p className="mt-1 text-ink-100-300">
         Quick definitions for the most common HDD mining terms.
       </p>
 
@@ -874,10 +868,10 @@ function Glossary() {
           {items.map((it) => (
             <div
               key={it.term}
-              className="border-b border-neutral-200 pb-4 last:border-b-0 last:pb-0"
+              className="border-b border-white/10 pb-4 last:border-b-0 last:pb-0"
             >
-              <dt className="font-semibold text-signum-midnight">{it.term}</dt>
-              <dd className="text-neutral-700 text-[15px] mt-1">{it.def}</dd>
+              <dt className="font-semibold text-ink-100-100">{it.term}</dt>
+              <dd className="text-ink-100-300 text-[15px] mt-1">{it.def}</dd>
             </div>
           ))}
         </dl>
@@ -890,25 +884,25 @@ function Glossary() {
 function FAQ({ faqItems }: { faqItems: { q: string; a: string }[] }) {
   return (
     <section id="faq" className="scroll-mt-28">
-      <h2 className="text-2xl font-semibold text-signum-midnight">
+      <h2 className="text-2xl font-semibold text-ink-100-100">
         FAQ <FontAwesomeIcon icon={faCircleQuestion} className="text-lg" />
       </h2>
 
-      <div className="mt-4 divide-y divide-neutral-200 rounded-2xl border border-neutral-200 bg-white">
+      <div className="mt-4 divide-y divide-white/10 rounded-2xl border border-white/10 bg-night-2">
         {faqItems.map((f, i) => (
           <details key={i} className="group p-5">
             <summary className="flex cursor-pointer list-none items-center justify-between">
-              <span className="font-medium text-signum-midnight">
+              <span className="font-medium text-ink-100-100">
                 <strong>{f.q}</strong>
               </span>
               <ArrowRight className="h-4 w-4 transition-transform group-open:rotate-90" />
             </summary>
-            <div className="mt-2 text-signum-midnight text-[15px]">{f.a}</div>
+            <div className="mt-2 text-ink-100-100 text-[15px]">{f.a}</div>
           </details>
         ))}
       </div>
 
-      <p className="mt-3 text-sm text-neutral-600">
+      <p className="mt-3 text-sm text-ink-100-300">
         More troubleshooting:{" "}
         <LinkOut href="https://docs.signum.network/signum/configure-and-start-mining">
           Configure & start mining
@@ -923,10 +917,10 @@ function FinalCTA() {
   return (
     <section className="scroll-mt-28">
       <div className="card p-6 text-center">
-        <h2 className="text-2xl font-semibold text-signum-midnight">
+        <h2 className="text-2xl font-semibold text-ink-100-100">
           Ready to start HDD mining?
         </h2>
-        <p className="mt-1 text-neutral-700">
+        <p className="mt-1 text-ink-100-300">
           Start with a pool for the smoothest setup — then scale storage over
           time.
         </p>
@@ -955,7 +949,7 @@ function SegmentedTabs({
   const [active, setActive] = useState<string>(tabs[0]);
   return (
     <div>
-      <div className="inline-flex rounded-xl ring-1 ring-neutral-200 bg-white p-1">
+      <div className="inline-flex rounded-xl ring-1 ring-neutral-200 bg-night-2 p-1">
         {tabs.map((t) => (
           <button
             key={t}
@@ -965,7 +959,7 @@ function SegmentedTabs({
               ${
                 active === t
                   ? "bg-signum-blue text-white shadow"
-                  : "text-signum-midnight hover:bg-neutral-50"
+                  : "text-ink-100-100 hover:bg-night-2"
               }`}
           >
             {t}
@@ -993,12 +987,12 @@ function StepCard({
   return (
     <article className="card h-full p-5 flex flex-col">
       <div className="flex items-start gap-3">
-        <div className="rounded-xl bg-signum-acqua/70 p-2 text-signum-midnight/80">
+        <div className="rounded-xl bg-white/5 p-2 text-ink-100-100/80">
           {icon}
         </div>
         <div className="flex-1">
-          <h3 className="font-semibold text-signum-midnight">{title}</h3>
-          <p className="mt-1 text-neutral-700 text-[15px]">{text}</p>
+          <h3 className="font-semibold text-ink-100-100">{title}</h3>
+          <p className="mt-1 text-ink-100-300 text-[15px]">{text}</p>
         </div>
       </div>
 
@@ -1007,7 +1001,7 @@ function StepCard({
           href={href}
           target="_blank"
           rel="noreferrer"
-          className="btn btn-primary-sm w-full justify-center text-signum-midnight"
+          className="btn btn-primary-sm w-full justify-center text-ink-100-100"
         >
           <FontAwesomeIcon icon={faBook} className="text-sm" />
           <FontAwesomeIcon
@@ -1021,7 +1015,7 @@ function StepCard({
             href={extraLink.href}
             target="_blank"
             rel="noreferrer"
-            className="btn btn-primary-sm w-full justify-center text-signum-midnight"
+            className="btn btn-primary-sm w-full justify-center text-ink-100-100"
           >
             {extraLink.label}
             <FontAwesomeIcon
@@ -1047,12 +1041,12 @@ function InfoCard({
   return (
     <div className="card p-5">
       <div className="flex items-start gap-3">
-        <div className="rounded-xl bg-signum-acqua/70 p-2 text-signum-midnight/80">
+        <div className="rounded-xl bg-white/5 p-2 text-ink-100-100/80">
           {icon}
         </div>
         <div>
-          <h3 className="font-semibold text-signum-midnight">{title}</h3>
-          <p className="text-neutral-700 text-[15px] mt-1">{text}</p>
+          <h3 className="font-semibold text-ink-100-100">{title}</h3>
+          <p className="text-ink-100-300 text-[15px] mt-1">{text}</p>
         </div>
       </div>
     </div>
@@ -1071,7 +1065,7 @@ function LinkOut({
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="inline-flex items-center gap-1 underline underline-offset-4 hover:text-neutral-900"
+      className="inline-flex items-center gap-1 underline underline-offset-4 hover:text-ink-100-100"
     >
       {children}
       <ExternalLink className="h-3.5 w-3.5" />

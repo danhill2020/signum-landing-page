@@ -470,7 +470,7 @@ export default function PrivacyPolicyPage() {
       />
       {/* Hero */}
       <header
-        className="relative border-b border-neutral-200/60 bg-signum-darkblue backdrop-blur"
+        className="relative border-b border-white/10 bg-signum-darkblue backdrop-blur"
         id="hero"
       >
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent" />
@@ -514,10 +514,10 @@ export default function PrivacyPolicyPage() {
           <div className="prose prose-neutral max-w-none prose-p:leading-relaxed prose-li:leading-relaxed">
             {sections.map((s) => (
               <section key={s.id} id={s.id} className="scroll-mt-28 mb-10">
-                <h2 className="mb-3 text-xl font-semibold text-neutral-900">
+                <h2 className="mb-3 text-xl font-semibold text-ink-100-100">
                   {s.title}
                 </h2>
-                <div className="text-[15px] text-neutral-700">{s.body}</div>
+                <div className="text-[15px] text-ink-100-300">{s.body}</div>
               </section>
             ))}
           </div>
@@ -529,7 +529,7 @@ export default function PrivacyPolicyPage() {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
-              className="inline-flex items-center gap-2 rounded-lg border border-neutral-200 bg-white px-4 py-2 text-sm text-neutral-700 shadow-sm transition hover:border-neutral-300 hover:text-neutral-900"
+              className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-night-2 px-4 py-2 text-sm text-ink-100-300 shadow-sm transition hover:border-white/15 hover:text-ink-100-100"
             >
               ↑ Back to top
             </a>

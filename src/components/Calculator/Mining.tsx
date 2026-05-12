@@ -90,10 +90,10 @@ export function SignumMiningLanding() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-white to-signum-acqua/40 text-signum-midnight">
+    <div className="bg-gradient-to-b from-night to-night-2 text-ink-100-100">
       <section className="w-full py-16 sm:py-20">
         <div className="mx-auto px-4 sm:px-6 max-w-5xl text-center">
-          <p className="kicker text-sm tracking-widest text-signum-midnight/90">
+          <p className="kicker text-sm tracking-widest text-ink-100-100/90">
             HDD MINING CALCULATOR
           </p>
           <h2 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
@@ -116,7 +116,7 @@ export function SignumMiningLanding() {
                     type="number"
                     value={plotSize}
                     onChange={(e) => setPlotSize(Number(e.target.value))}
-                    className="bg-white border-neutral-200 focus:border-signum-blue focus:ring-1 focus:ring-signum-blue/40"
+                    className="bg-night-2 border-white/10 focus:border-signum-blue focus:ring-1 focus:ring-signum-blue/40"
                   />
                 </div>
 
@@ -127,11 +127,11 @@ export function SignumMiningLanding() {
                     type="number"
                     value={commitment}
                     onChange={(e) => setCommitment(Number(e.target.value))}
-                    className="bg-white border-neutral-200 focus:border-signum-blue focus:ring-1 focus:ring-signum-blue/40"
+                    className="bg-night-2 border-white/10 focus:border-signum-blue focus:ring-1 focus:ring-signum-blue/40"
                   />
-                  <p className="text-sm text-neutral-500">
+                  <p className="text-sm text-ink-100-400">
                     Commitment factor:{" "}
-                    <span className="font-medium text-signum-midnight">
+                    <span className="font-medium text-ink-100-100">
                       {commitmentFactor.toFixed(3)}
                     </span>
                   </p>
@@ -145,7 +145,7 @@ export function SignumMiningLanding() {
                       className={`px-4 ${
                         incomeRange === 1
                           ? "bg-signum-blue text-white hover:bg-signum-darkblue"
-                          : "bg-white text-signum-midnight ring-1 ring-neutral-200 hover:bg-neutral-50"
+                          : "bg-night-2 text-ink-100-100 ring-1 ring-neutral-200 hover:bg-night-2"
                       }`}
                     >
                       Daily
@@ -155,7 +155,7 @@ export function SignumMiningLanding() {
                       className={`px-4 ${
                         incomeRange === 2
                           ? "bg-signum-blue text-white hover:bg-signum-darkblue"
-                          : "bg-white text-signum-midnight ring-1 ring-neutral-200 hover:bg-neutral-50"
+                          : "bg-night-2 text-ink-100-100 ring-1 ring-neutral-200 hover:bg-night-2"
                       }`}
                     >
                       Monthly
@@ -165,7 +165,7 @@ export function SignumMiningLanding() {
                       className={`px-4 ${
                         incomeRange === 3
                           ? "bg-signum-blue text-white hover:bg-signum-darkblue"
-                          : "bg-white text-signum-midnight ring-1 ring-neutral-200 hover:bg-neutral-50"
+                          : "bg-night-2 text-ink-100-100 ring-1 ring-neutral-200 hover:bg-night-2"
                       }`}
                     >
                       Yearly
@@ -179,7 +179,7 @@ export function SignumMiningLanding() {
                     <Button
                       onClick={resetPriceSimulation}
                       size="sm"
-                      className="bg-white text-signum-midnight ring-1 ring-neutral-200 hover:bg-neutral-50"
+                      className="bg-night-2 text-ink-100-100 ring-1 ring-neutral-200 hover:bg-night-2"
                       aria-label="Reset price simulation"
                     >
                       <X className="h-4 w-4" />
@@ -194,7 +194,7 @@ export function SignumMiningLanding() {
                     onValueChange={(v) => setSimulatedPricePercentage(v[0])}
                     className="w-full"
                   />
-                  <p className="text-sm text-neutral-500">
+                  <p className="text-sm text-ink-100-400">
                     Price: $
                     {(signaPrice * (simulatedPricePercentage / 100)).toFixed(6)}
                     {simulatedPricePercentage !== 100 &&
@@ -205,30 +205,30 @@ export function SignumMiningLanding() {
 
               {/* Right summary */}
               <div className="space-y-5">
-                <div className="rounded-2xl bg-white ring-1 ring-neutral-200 p-5 shadow-[var(--shadow-card)]">
+                <div className="rounded-2xl bg-night-2 ring-1 ring-neutral-200 p-5 shadow-[var(--shadow-card)]">
                   <p className="text-sm font-medium ">Estimated income</p>
                   <div className="mt-2 text-3xl font-semibold tracking-tight">
                     {income.signa}{" "}
                     <span className="text-xl font-normal">SIGNA</span>
                   </div>
-                  <div className="mt-1 text-neutral-500">${income.usd} USD</div>
+                  <div className="mt-1 text-ink-100-400">${income.usd} USD</div>
                   <div className="mt-4 grid grid-cols-2 gap-4 text-sm">
-                    <div className="rounded-xl bg-signum-acqua/60 p-3">
+                    <div className="rounded-xl bg-white/5 p-3">
                       <div className="font-bold">Block reward without fees</div>
-                      <div className="font-medium text-signum-midnight">
+                      <div className="font-medium text-ink-100-100">
                         {blockReward} SIGNA
                       </div>
                     </div>
-                    <div className="rounded-xl bg-signum-acqua/60 p-3">
+                    <div className="rounded-xl bg-white/5 p-3">
                       <div className="font-bold">Network Commitment</div>
-                      <div className="font-medium text-signum-midnight">
+                      <div className="font-medium text-ink-100-100">
                         {tbCommitment} SIGNA/TB
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <p className="text-xs text-neutral-500">
+                <p className="text-xs text-ink-100-400">
                   Estimates are illustrative and based on current network data.
                   Actual results may vary.
                 </p>

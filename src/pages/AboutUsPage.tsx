@@ -85,7 +85,7 @@ export default function DisclaimerPage() {
       />
       {/* Hero */}
       <header
-        className="relative border-b border-neutral-200/60 bg-signum-darkblue backdrop-blur"
+        className="relative border-b border-white/10 bg-signum-darkblue backdrop-blur"
         id="hero"
       >
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent" />
@@ -130,7 +130,7 @@ export default function DisclaimerPage() {
           {/* Quick Nav (Apple-like subtle index) */}
           <nav
             aria-label="On this page"
-            className="mb-8 rounded-xl border border-neutral-200/70 bg-signum-acqua/70 p-4"
+            className="mb-8 rounded-xl border border-white/10 bg-white/5 p-4"
           >
             <div className="mb-2 text-xs font-medium uppercase tracking-wid text-shadow-signum-midnight">
               On this page
@@ -140,7 +140,7 @@ export default function DisclaimerPage() {
                 <li key={s.id}>
                   <a
                     href={`#${s.id}`}
-                    className="text-signum-midnight underline-offset-4 hover:text-neutral-900 hover:underline"
+                    className="text-ink-100-100 underline-offset-4 hover:text-ink-100-100 hover:underline"
                   >
                     {s.title.split(". ")[0]}. {s.title.split(". ")[1]}
                   </a>
@@ -153,10 +153,10 @@ export default function DisclaimerPage() {
           <div className="prose prose-neutral max-w-none prose-p:leading-relaxed prose-li:leading-relaxed">
             {sections.map((s) => (
               <section key={s.id} id={s.id} className="scroll-mt-28">
-                <h2 className="mt-5 mb-3 text-xl font-semibold text-signum-midnight">
+                <h2 className="mt-5 mb-3 text-xl font-semibold text-ink-100-100">
                   {s.title}
                 </h2>
-                <div className="text-[15px] text-signum-midnight">{s.body}</div>
+                <div className="text-[15px] text-ink-100-100">{s.body}</div>
               </section>
             ))}
           </div>
@@ -169,7 +169,7 @@ export default function DisclaimerPage() {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
-              className="inline-flex items-center gap-2 rounded-lg border border-neutral-200 bg-white px-4 py-2 text-sm text-neutral-700 shadow-sm transition hover:border-neutral-300 hover:text-neutral-900"
+              className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-night-2 px-4 py-2 text-sm text-ink-100-300 shadow-sm transition hover:border-white/15 hover:text-ink-100-100"
             >
               ↑ Back to top
             </a>

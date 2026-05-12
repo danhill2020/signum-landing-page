@@ -172,7 +172,7 @@ export default function SnaPage() {
       />
 
       {/* ========================= HERO ========================= */}
-      <header className="relative isolate overflow-hidden border-b border-neutral-200/60 bg-signum-blue">
+      <header className="relative isolate overflow-hidden border-b border-white/10 bg-signum-blue">
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent" />
         <img
           src={Platine}
@@ -232,13 +232,13 @@ export default function SnaPage() {
 
       {/* ========================= CONTENT ========================= */}
       <main>
-        <section id="purpose" className="bg-white">
+        <section id="purpose" className="bg-night-2">
           <Container className="py-14 space-y-8">
             <div className="max-w-3xl">
-              <h2 className="text-2xl font-semibold text-signum-midnight">
+              <h2 className="text-2xl font-semibold text-ink-100-100">
                 The Purpose of the SNA
               </h2>
-              <p className="mt-3 text-neutral-700">
+              <p className="mt-3 text-ink-100-300">
                 The SNA promotes the development and awareness of the
                 open-source Signum blockchain — exceptionally energy-efficient
                 through its unique{" "}
@@ -248,7 +248,7 @@ export default function SnaPage() {
                 consensus — and helps turn it into a sustainable building block
                 for the digital economy.
               </p>
-              <p className="mt-3 text-neutral-700">
+              <p className="mt-3 text-ink-100-300">
                 We represent members’ interests, support builders and research,
                 grow the association network, educate and connect people, and
                 collaborate internationally — always with transparency and
@@ -259,23 +259,21 @@ export default function SnaPage() {
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 relative z-10">
               {Pillars.map((p) => (
                 <article key={p.title} className="card p-5 h-full">
-                  <div className="rounded-xl bg-signum-acqua/70 p-2 text-signum-midnight/90 w-fit">
+                  <div className="rounded-xl bg-white/5 p-2 text-ink-100-100/90 w-fit">
                     {p.icon}
                   </div>
-                  <h3 className="mt-3 font-semibold text-signum-midnight">
+                  <h3 className="mt-3 font-semibold text-ink-100-100">
                     {p.title}
                   </h3>
-                  <p className="mt-2 text-[15px] text-neutral-700">{p.body}</p>
+                  <p className="mt-2 text-[15px] text-ink-100-300">{p.body}</p>
                 </article>
               ))}
             </div>
 
             <div className="grid gap-4 md:grid-cols-3">
               <article className="card p-6">
-                <h3 className="font-semibold text-signum-midnight">
-                  Our story
-                </h3>
-                <p className="mt-2 text-[15px] text-neutral-700">
+                <h3 className="font-semibold text-ink-100-100">Our story</h3>
+                <p className="mt-2 text-[15px] text-ink-100-300">
                   Founded 2021, in the Kanton Zuerich of Switzerland, as a
                   not-for-profit association (according to Art. 60 ff. des
                   Schweizerischen Zivilgesetzbuches), the SNA builds on
@@ -284,20 +282,16 @@ export default function SnaPage() {
                 </p>
               </article>
               <article className="card p-6">
-                <h3 className="font-semibold text-signum-midnight">
-                  Focus areas
-                </h3>
-                <ul className="mt-2 text-[15px] text-neutral-700 list-disc pl-5">
+                <h3 className="font-semibold text-ink-100-100">Focus areas</h3>
+                <ul className="mt-2 text-[15px] text-ink-100-300 list-disc pl-5">
                   <li>Developer funding &amp; ecosystem tooling</li>
                   <li>Community education &amp; events</li>
                   <li>Responsible adoption &amp; partnerships</li>
                 </ul>
               </article>
               <article className="card p-6">
-                <h3 className="font-semibold text-signum-midnight">
-                  Get involved
-                </h3>
-                <p className="mt-2 text-[15px] text-neutral-700">
+                <h3 className="font-semibold text-ink-100-100">Get involved</h3>
+                <p className="mt-2 text-[15px] text-ink-100-300">
                   Want to contribute or partner with us? We’d love to hear from
                   you.
                 </p>
@@ -312,13 +306,13 @@ export default function SnaPage() {
           </Container>
         </section>
 
-        <section id="donation" className="scroll-mt-28 bg-neutral-50">
+        <section id="donation" className="scroll-mt-28 bg-night-2">
           <Container className="py-14">
             <div className="max-w-3xl">
-              <h2 className="text-2xl font-semibold text-signum-midnight">
+              <h2 className="text-2xl font-semibold text-ink-100-100">
                 Donate to the SNA
               </h2>
-              <p className="mt-2 text-neutral-700">
+              <p className="mt-2 text-ink-100-300">
                 Your contribution directly supports development, education and
                 adoption around the Signum blockchain. Thank you for helping us
                 build a truly sustainable crypto ecosystem.
@@ -327,46 +321,46 @@ export default function SnaPage() {
 
             <div className="mt-6 grid gap-4 md:grid-cols-2">
               <article className="card p-6">
-                <h3 className="font-semibold text-signum-midnight">
+                <h3 className="font-semibold text-ink-100-100">
                   Bank transfer — CHF
                 </h3>
-                <p className="mt-2 text-[15px] text-neutral-700">
+                <p className="mt-2 text-[15px] text-ink-100-300">
                   Signum-Network Association, PostFinance Bern
                 </p>
-                <div className="mt-3 grid gap-1 text-sm font-mono text-neutral-700">
+                <div className="mt-3 grid gap-1 text-sm font-mono text-ink-100-300">
                   <div>
-                    <span className="text-neutral-500">BIC:&nbsp;</span>
+                    <span className="text-ink-100-400">BIC:&nbsp;</span>
                     POFICHBEXXX
                   </div>
                   <div className="break-all">
-                    <span className="text-neutral-500">IBAN:&nbsp;</span>
+                    <span className="text-ink-100-400">IBAN:&nbsp;</span>
                     CH2709000000157262559
                   </div>
                 </div>
               </article>
 
               <article className="card p-6">
-                <h3 className="font-semibold text-signum-midnight">
+                <h3 className="font-semibold text-ink-100-100">
                   Bank transfer — EUR
                 </h3>
-                <p className="mt-2 text-[15px] text-neutral-700">
+                <p className="mt-2 text-[15px] text-ink-100-300">
                   Signum-Network Association, PostFinance Bern
                 </p>
-                <div className="mt-3 grid gap-1 text-sm font-mono text-neutral-700">
+                <div className="mt-3 grid gap-1 text-sm font-mono text-ink-100-300">
                   <div>
-                    <span className="text-neutral-500">BIC:&nbsp;</span>
+                    <span className="text-ink-100-400">BIC:&nbsp;</span>
                     POFICHBEXXX
                   </div>
                   <div className="break-all">
-                    <span className="text-neutral-500">IBAN:&nbsp;</span>
+                    <span className="text-ink-100-400">IBAN:&nbsp;</span>
                     CH4209000000157262580
                   </div>
                 </div>
               </article>
 
               <article className="card p-6">
-                <h3 className="font-semibold text-signum-midnight">PayPal</h3>
-                <p className="mt-2 text-[15px] text-neutral-700">
+                <h3 className="font-semibold text-ink-100-100">PayPal</h3>
+                <p className="mt-2 text-[15px] text-ink-100-300">
                   Prefer PayPal? Just donate in EUR or USD.
                 </p>
                 <div className="mt-4 flex flex-wrap gap-3">
@@ -390,10 +384,10 @@ export default function SnaPage() {
               </article>
 
               <article className="card p-6">
-                <h3 className="font-semibold text-signum-midnight">
+                <h3 className="font-semibold text-ink-100-100">
                   Donation in SIGNA
                 </h3>
-                <p className="mt-2 text-[15px] text-neutral-700">
+                <p className="mt-2 text-[15px] text-ink-100-300">
                   Donate directly on-chain in SIGNA. Adress
                   S-5MS6-5FBY-74H4-9N4HS.
                 </p>

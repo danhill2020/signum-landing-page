@@ -3,10 +3,10 @@ export default function ProductCard({ title, desc, href, kicker }: CardProps) {
   return (
     <a href={href} className="card p-6 group">
       {kicker && <div className="kicker">{kicker}</div>}
-      <h3 className="mt-1 text-2xl font-semibold tracking-tight text-signum-midnight">
+      <h3 className="mt-1 text-2xl font-semibold tracking-tight text-ink-100-100">
         {title}
       </h3>
-      <p className="mt-2 text-neutral-700 text-sm">{desc}</p>
+      <p className="mt-2 text-ink-100-300 text-sm">{desc}</p>
       <div className="mt-4 inline-flex items-center gap-2 text-sm text-signum-blue">
         <span className="group-hover:translate-x-0.5 transition">Open</span>
         <svg

@@ -50,7 +50,7 @@ function MobileMenuSheet({
 
       {/* Sheet */}
       <div
-        className="absolute inset-x-0 top-0 mx-3 my-3 rounded-2xl bg-white shadow-soft ring-1 ring-black/5
+        className="absolute inset-x-0 top-0 mx-3 my-3 rounded-2xl bg-night-2 text-ink-100 shadow-soft ring-1 ring-white/10
                    max-h-[calc(100vh-1.5rem)] overflow-y-auto overscroll-contain"
         onClick={(e) => e.stopPropagation()}
       >
@@ -145,21 +145,21 @@ export default function NavBar() {
 
   return (
     <>
-      <header className="sticky top-0 z-40 backdrop-blur bg-white/70 border-b border-neutral-200/70">
+      <header className="sticky top-0 z-40 backdrop-blur bg-night/80 border-b border-white/10 text-ink-100">
         <Container className="h-14 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
             <img
               src="/img/logo/Signum_Logomark_black.svg"
               alt="Signum Logo"
-              className="h-10 w-10"
+              className="h-10 w-10 brightness-0 invert"
             />
-            <span className="font-bold tracking-tight text-signum-midnight text-4xl">
+            <span className="font-bold tracking-tight text-ink-100 text-4xl">
               Signum
             </span>
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-6 text-signum-midnight">
+          <nav className="hidden lg:flex items-center gap-6 text-ink-100">
             {/* DISCOVER dropdown (internal) */}
             <div className="relative">
               <button
@@ -192,14 +192,14 @@ export default function NavBar() {
                 <div
                   ref={discMenuRef}
                   role="menu"
-                  className="absolute left-0 top-full mt-2 w-64 rounded-2xl bg-white shadow-[var(--shadow-card)] ring-1 ring-neutral-200/70 p-2"
+                  className="absolute left-0 top-full mt-2 w-64 rounded-2xl bg-night-2 shadow-soft ring-1 ring-white/10 p-2"
                 >
                   <ul className="space-y-1">
                     {discoverMenu.map((d) => (
                       <li key={d.label}>
                         <NavLink
                           to={d.to}
-                          className="block rounded-xl px-3 py-2 text-[15px] text-neutral-800 hover:bg-signum-acqua"
+                          className="block rounded-xl px-3 py-2 text-[15px] text-ink-300 hover:bg-white/5 hover:text-white"
                           onClick={() => setDiscoverOpen(false)}
                         >
                           {d.label}
@@ -276,7 +276,7 @@ export default function NavBar() {
                 <div
                   ref={linksMenuRef}
                   role="menu"
-                  className="absolute right-0 top-full mt-2 w-60 rounded-2xl bg-white shadow-[var(--shadow-card)] ring-1 ring-neutral-200/70 p-2"
+                  className="absolute right-0 top-full mt-2 w-60 rounded-2xl bg-night-2 shadow-soft ring-1 ring-white/10 p-2"
                 >
                   <ul className="space-y-1">
                     {linksMenu.map((l) => (
@@ -285,7 +285,7 @@ export default function NavBar() {
                           href={l.href}
                           target="_blank"
                           rel="noreferrer"
-                          className="block rounded-xl px-3 py-2 text-[15px] text-neutral-800 hover:bg-signum-acqua"
+                          className="block rounded-xl px-3 py-2 text-[15px] text-ink-300 hover:bg-white/5 hover:text-white"
                           onClick={() => setLinksOpen(false)}
                         >
                           {l.label}
@@ -307,7 +307,7 @@ export default function NavBar() {
           {/* Mobile hamburger */}
           <button
             type="button"
-            className="lg:hidden inline-flex items-center justify-center rounded-xl p-2 border border-neutral-300"
+            className="lg:hidden inline-flex items-center justify-center rounded-xl p-2 border border-white/15 text-ink-100"
             aria-label="Open menu"
             aria-expanded={open}
             aria-controls="mobile-menu"
@@ -336,16 +336,16 @@ export default function NavBar() {
             <img
               src="/img/logo/Signum_Logomark_black.svg"
               alt="Signum Logo"
-              className="h-5 w-5"
+              className="h-5 w-5 brightness-0 invert"
             />
-            <span className="font-bold tracking-tight text-signum-midnight">
+            <span className="font-bold tracking-tight text-ink-100">
               SIGNUM
             </span>
           </Link>
           <button
             ref={firstFocusable}
             type="button"
-            className="inline-flex items-center justify-center rounded-xl p-2 border border-neutral-300"
+            className="inline-flex items-center justify-center rounded-xl p-2 border border-white/15 text-ink-100"
             aria-label="Close menu"
             onClick={() => setOpen(false)}
           >
@@ -366,7 +366,7 @@ export default function NavBar() {
             <li className="mt-1">
               <button
                 type="button"
-                className="w-full text-left rounded-xl px-3 py-2 text-base text-neutral-800 hover:bg-signum-acqua inline-flex items-center justify-between"
+                className="w-full text-left rounded-xl px-3 py-2 text-base text-ink-300 hover:bg-white/5 hover:text-white inline-flex items-center justify-between"
                 aria-expanded={mobileDiscoverOpen}
                 onClick={() => setMobileDiscoverOpen((v) => !v)}
               >
@@ -387,7 +387,7 @@ export default function NavBar() {
                     <li key={d.label}>
                       <NavLink
                         to={d.to}
-                        className="block rounded-xl px-3 py-2 text-base text-neutral-800 hover:bg-signum-acqua"
+                        className="block rounded-xl px-3 py-2 text-base text-ink-300 hover:bg-white/5 hover:text-white"
                         onClick={() => setOpen(false)}
                       >
                         {d.label}
@@ -402,7 +402,7 @@ export default function NavBar() {
             <li>
               <NavLink
                 to="/poc-plus"
-                className="block rounded-xl px-3 py-2 text-base text-neutral-800 hover:bg-signum-acqua"
+                className="block rounded-xl px-3 py-2 text-base text-ink-300 hover:bg-white/5 hover:text-white"
                 onClick={() => setOpen(false)}
               >
                 PoC+
@@ -411,7 +411,7 @@ export default function NavBar() {
             <li>
               <NavLink
                 to="/mining"
-                className="block rounded-xl px-3 py-2 text-base text-neutral-800 hover:bg-signum-acqua"
+                className="block rounded-xl px-3 py-2 text-base text-ink-300 hover:bg-white/5 hover:text-white"
                 onClick={() => setOpen(false)}
               >
                 Mining
@@ -420,7 +420,7 @@ export default function NavBar() {
             <li>
               <NavLink
                 to="/wallet"
-                className="block rounded-xl px-3 py-2 text-base text-neutral-800 hover:bg-signum-acqua"
+                className="block rounded-xl px-3 py-2 text-base text-ink-300 hover:bg-white/5 hover:text-white"
                 onClick={() => setOpen(false)}
               >
                 Wallets
@@ -431,7 +431,7 @@ export default function NavBar() {
             <li className="mt-1">
               <button
                 type="button"
-                className="w-full text-left rounded-xl px-3 py-2 text-base text-neutral-800 hover:bg-signum-acqua inline-flex items-center justify-between"
+                className="w-full text-left rounded-xl px-3 py-2 text-base text-ink-300 hover:bg-white/5 hover:text-white inline-flex items-center justify-between"
                 aria-expanded={mobileLinksOpen}
                 onClick={() => setMobileLinksOpen((v) => !v)}
               >
@@ -454,7 +454,7 @@ export default function NavBar() {
                         href={l.href}
                         target="_blank"
                         rel="noreferrer"
-                        className="block rounded-xl px-3 py-2 text-base text-neutral-800 hover:bg-signum-acqua"
+                        className="block rounded-xl px-3 py-2 text-base text-ink-300 hover:bg-white/5 hover:text-white"
                         onClick={() => setOpen(false)}
                       >
                         {l.label}

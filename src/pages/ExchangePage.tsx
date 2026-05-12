@@ -111,7 +111,7 @@ export default function ExchangesPage() {
         image="https://www.signum.network/og/Signum_blue.png"
         url="https://www.signum.network/exchanges"
       />
-      <header className="relative isolate overflow-hidden border-b border-neutral-200/60 bg-signum-midnight">
+      <header className="relative isolate overflow-hidden border-b border-white/10 bg-signum-midnight">
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent" />
         <img
           src={Platine}
@@ -181,7 +181,7 @@ function Badge({
   tone?: "neutral" | "success" | "warning";
 }) {
   const tones = {
-    neutral: "bg-neutral-100 text-neutral-700 ring-neutral-200",
+    neutral: "bg-night-3 text-ink-100-300 ring-neutral-200",
     success: "bg-emerald-50 text-emerald-700 ring-emerald-200",
     warning: "bg-amber-50 text-amber-800 ring-amber-200",
   } as const;
@@ -202,7 +202,7 @@ function CexCard({ ex }: { ex: Exchange }) {
         ? "warning"
         : "neutral";
   return (
-    <article className="group relative rounded-2xl bg-white p-6 ring-1 ring-neutral-200/70 shadow-[var(--shadow-card)] transition hover:shadow-lift">
+    <article className="group relative rounded-2xl bg-night-2 p-6 ring-1 ring-neutral-200/70 shadow-[var(--shadow-card)] transition hover:shadow-lift">
       <div className="flex items-center gap-3">
         <img
           src={ex.logo}
@@ -211,7 +211,7 @@ function CexCard({ ex }: { ex: Exchange }) {
           loading="lazy"
         />
         <div className="min-w-0">
-          <h3 className="font-semibold text-signum-midnight">{ex.name}</h3>
+          <h3 className="font-semibold text-ink-100-100">{ex.name}</h3>
           <div className="mt-1 flex flex-wrap items-center gap-2">
             {ex.region && <Badge>{ex.region}</Badge>}
             {typeof ex.kyc === "boolean" && (
@@ -229,7 +229,7 @@ function CexCard({ ex }: { ex: Exchange }) {
       </div>
 
       {ex.notes && (
-        <p className="mt-4 text-[15px] text-neutral-700">{ex.notes}</p>
+        <p className="mt-4 text-[15px] text-ink-100-300">{ex.notes}</p>
       )}
 
       <div className="mt-5">
@@ -250,10 +250,10 @@ function CexGrid() {
   return (
     <section className="relative z-10">
       <Container className="py-10">
-        <h2 className="text-2xl font-semibold text-signum-midnight">
+        <h2 className="text-2xl font-semibold text-ink-100-100">
           Centralized exchanges (CEX)
         </h2>
-        <p className="mt-2 text-signum-midnight">
+        <p className="mt-2 text-ink-100-100">
           These platforms list SIGNA. Always verify pairs, liquidity and
           supported regions.
         </p>
@@ -273,31 +273,31 @@ function HowToBuy() {
     <section className="relative z-10">
       <Container className="py-12">
         <div className="card p-6">
-          <h3 className="text-xl font-semibold text-signum-midnight">
+          <h3 className="text-xl font-semibold text-ink-100-100">
             How to get SIGNA in 3 steps
           </h3>
           <ol className="mt-4 grid gap-6 sm:grid-cols-3">
-            <li className="rounded-xl bg-signum-acqua/50 p-4">
-              <div className="text-sm font-semibold text-signum-midnight">
+            <li className="rounded-xl bg-white/5 p-4">
+              <div className="text-sm font-semibold text-ink-100-100">
                 1. Choose a CEX
               </div>
-              <p className="mt-1 text-[15px] text-neutral-700">
+              <p className="mt-1 text-[15px] text-ink-100-300">
                 Create an account and complete verification if required.
               </p>
             </li>
-            <li className="rounded-xl bg-signum-acqua/50 p-4">
-              <div className="text-sm font-semibold text-signum-midnight">
+            <li className="rounded-xl bg-white/5 p-4">
+              <div className="text-sm font-semibold text-ink-100-100">
                 2. Deposit funds
               </div>
-              <p className="mt-1 text-[15px] text-neutral-700">
+              <p className="mt-1 text-[15px] text-ink-100-300">
                 Deposit fiat or crypto supported by the exchange.
               </p>
             </li>
-            <li className="rounded-xl bg-signum-acqua/50 p-4">
-              <div className="text-sm font-semibold text-signum-midnight">
+            <li className="rounded-xl bg-white/5 p-4">
+              <div className="text-sm font-semibold text-ink-100-100">
                 3. Buy & withdraw
               </div>
-              <p className="mt-1 text-[15px] text-neutral-700">
+              <p className="mt-1 text-[15px] text-ink-100-300">
                 Trade to SIGNA and withdraw to your personal wallet.
               </p>
             </li>
@@ -312,16 +312,16 @@ function SafetyNotes() {
   return (
     <section className="relative z-10">
       <Container className="py-10">
-        <div className="rounded-2xl bg-white p-6 ring-1 ring-neutral-200/70 shadow-[var(--shadow-card)]">
+        <div className="rounded-2xl bg-night-2 p-6 ring-1 ring-neutral-200/70 shadow-[var(--shadow-card)]">
           <div className="flex items-start gap-3">
             <div className="rounded-xl bg-emerald-50 p-2 ring-1 ring-emerald-200">
               <ShieldCheck className="h-5 w-5 text-emerald-700" />
             </div>
             <div>
-              <h3 className="font-semibold text-signum-midnight">
+              <h3 className="font-semibold text-ink-100-100">
                 Tips for choosing an exchange
               </h3>
-              <ul className="mt-2 space-y-2 text-[15px] text-neutral-700 list-disc pl-5">
+              <ul className="mt-2 space-y-2 text-[15px] text-ink-100-300 list-disc pl-5">
                 <li>Prefer exchanges with good volume and reputation.</li>
                 <li>
                   Check supported regions, pairs, deposit/withdrawal options.
@@ -347,10 +347,10 @@ function FinalCTA() {
     <section className="relative z-10">
       <Container className="py-12 text-center">
         <div className="card p-8">
-          <h3 className="text-2xl font-semibold text-signum-midnight">
+          <h3 className="text-2xl font-semibold text-ink-100-100">
             Ready to explore the Signum ecosystem?
           </h3>
-          <p className="mt-2 text-neutral-700">
+          <p className="mt-2 text-ink-100-300">
             After purchasing SIGNA, move them to your personal wallet and try
             apps, tokens and more.
           </p>

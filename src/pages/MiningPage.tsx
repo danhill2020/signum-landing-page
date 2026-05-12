@@ -44,7 +44,7 @@ export default function MiningPage() {
       />
 
       {/* HERO */}
-      <header className="relative isolate overflow-hidden border-b border-neutral-200/60 bg-signum-blue">
+      <header className="relative isolate overflow-hidden border-b border-white/10 bg-signum-blue">
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent" />
         <img
           src={Platine}
@@ -146,7 +146,7 @@ function OnThisPage() {
   ];
   return (
     <nav aria-label="On this page" className="card p-4 sticky top-24">
-      <div className="mb-2 text-xs font-medium uppercase tracking-wide text-neutral-600">
+      <div className="mb-2 text-xs font-medium uppercase tracking-wide text-ink-100-300">
         On this page
       </div>
       <ul className="space-y-1 text-sm">
@@ -154,7 +154,7 @@ function OnThisPage() {
           <li key={i.href}>
             <a
               href={i.href}
-              className="block rounded-lg px-2 py-1 text-neutral-700 hover:text-neutral-900 hover:bg-signum-acqua"
+              className="block rounded-lg px-2 py-1 text-ink-100-300 hover:text-ink-100-100 hover:bg-white/5"
             >
               {i.label}
             </a>
@@ -169,10 +169,10 @@ function OnThisPage() {
 function QuickStart() {
   return (
     <section id="quickstart" className="scroll-mt-28">
-      <h2 className="text-2xl font-semibold text-signum-midnight">
+      <h2 className="text-2xl font-semibold text-ink-100-100">
         From zero to mining
       </h2>
-      <p className="mt-1 text-neutral-600">
+      <p className="mt-1 text-ink-100-300">
         Pick a path — pool or solo — and get started in minutes.
       </p>
       <div className="mt-6 card p-6">
@@ -271,28 +271,24 @@ function Requirements() {
   ];
   return (
     <section id="requirements" className="scroll-mt-28">
-      <h2 className="text-2xl font-semibold text-signum-midnight">
-        Requirements
-      </h2>
-      <p className="mt-1 text-neutral-600">Runs on what you already have.</p>
+      <h2 className="text-2xl font-semibold text-ink-100-100">Requirements</h2>
+      <p className="mt-1 text-ink-100-300">Runs on what you already have.</p>
       <div className="mt-4 grid gap-4 xl:grid-cols-2">
         {items.map((it) => (
           <div key={it.title} className="card p-5">
             <div className="flex items-start gap-3">
-              <div className="rounded-xl bg-signum-acqua/70 p-2 text-signum-midnight/80">
+              <div className="rounded-xl bg-white/5 p-2 text-ink-100-100/80">
                 {it.icon}
               </div>
               <div>
-                <h3 className="font-semibold text-signum-midnight">
-                  {it.title}
-                </h3>
-                <p className="text-neutral-700 text-[15px]">{it.text}</p>
+                <h3 className="font-semibold text-ink-100-100">{it.title}</h3>
+                <p className="text-ink-100-300 text-[15px]">{it.text}</p>
               </div>
             </div>
           </div>
         ))}
       </div>
-      <p className="mt-3 text-sm text-neutral-600">
+      <p className="mt-3 text-sm text-ink-100-300">
         Learn more in the docs:{" "}
         <LinkOut href="https://docs.signum.network/signum/requirements">
           Requirements
@@ -306,18 +302,18 @@ function Requirements() {
 function Plotting() {
   return (
     <section id="plotting" className="scroll-mt-28">
-      <h2 className="text-2xl font-semibold text-signum-midnight">Plotting</h2>
-      <p className="mt-1 text-neutral-600">
+      <h2 className="text-2xl font-semibold text-ink-100-100">Plotting</h2>
+      <p className="mt-1 text-ink-100-300">
         Create plot files once — storage does the heavy lifting.
       </p>
       <div className="mt-4 grid gap-4 xl:grid-cols-2">
         <div className="card p-5">
-          <h3 className="font-semibold text-signum-midnight">Simple (GUI)</h3>
-          <p className="mt-1 text-neutral-700 text-[15px]">
+          <h3 className="font-semibold text-ink-100-100">Simple (GUI)</h3>
+          <p className="mt-1 text-ink-100-300 text-[15px]">
             Use a graphical plotter for a friendly setup. You can keep using
             your machine while plotting.
           </p>
-          <p className="mt-3 text-sm text-neutral-600">
+          <p className="mt-3 text-sm text-ink-100-300">
             Guide:{" "}
             <LinkOut href="https://docs.signum.network/signum/plotting">
               Plotting (GUI)
@@ -325,12 +321,12 @@ function Plotting() {
           </p>
         </div>
         <div className="card p-5">
-          <h3 className="font-semibold text-signum-midnight">Advanced (CLI)</h3>
-          <p className="mt-1 text-neutral-700 text-[15px]">
+          <h3 className="font-semibold text-ink-100-100">Advanced (CLI)</h3>
+          <p className="mt-1 text-ink-100-300 text-[15px]">
             Prefer the terminal? Use the CLI plotter for maximum control and
             batching.
           </p>
-          <p className="mt-3 text-sm text-neutral-600">
+          <p className="mt-3 text-sm text-ink-100-300">
             Guide:{" "}
             <LinkOut href="https://docs.signum.network/signum/plotting">
               Plotting (CLI)
@@ -346,10 +342,10 @@ function Plotting() {
 function Configure() {
   return (
     <section id="configure" className="scroll-mt-28">
-      <h2 className="text-2xl font-semibold text-signum-midnight">
+      <h2 className="text-2xl font-semibold text-ink-100-100">
         Configure & start
       </h2>
-      <p className="mt-1 text-neutral-600">Point. Start. Earn.</p>
+      <p className="mt-1 text-ink-100-300">Point. Start. Earn.</p>
       <div className="mt-6 card p-6">
         <SegmentedTabs
           tabs={["Pool", "Solo"]}
@@ -419,17 +415,17 @@ function Commitment() {
       <div className="card p-6">
         <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-4">
           <div>
-            <h2 className="text-2xl font-semibold text-signum-midnight">
+            <h2 className="text-2xl font-semibold text-ink-100-100">
               More commitment. More capacity.
             </h2>
-            <p className="mt-1 text-neutral-700 text-[15px]">
+            <p className="mt-1 text-ink-100-300 text-[15px]">
               Add a Signa commitment to boost your effective capacity.{" "}
             </p>
-            <p className="mt-1 text-neutral-700 text-[15px]">
+            <p className="mt-1 text-ink-100-300 text-[15px]">
               Match the network average for <strong>1×</strong>. Go higher to
               unlock up to <strong>8×</strong>.
             </p>
-            <p className="mt-2 text-sm text-neutral-600">
+            <p className="mt-2 text-sm text-ink-100-300">
               Learn more:{" "}
               <LinkOut href="https://docs.signum.network/signum/adding-commitment">
                 Adding commitment
@@ -464,7 +460,7 @@ function Commitment() {
 
 function CTACommitment() {
   return (
-    <div className="-mt-10 bg-gradient-to-b from-signum-acqua/40 to-white text-signum-midnight">
+    <div className="-mt-10 bg-gradient-to-b from-night-2 to-night text-ink-100-100">
       <section className="pt-6 pb-12">
         {" "}
         <div className="mx-auto max-w-5xl">
@@ -501,27 +497,27 @@ function CalculatorSection() {
 function PoolsAndNetwork() {
   return (
     <section id="pools" className="scroll-mt-28">
-      <h2 className="text-2xl font-semibold text-signum-midnight">
+      <h2 className="text-2xl font-semibold text-ink-100-100">
         Pools & network
       </h2>
       <div className="mt-4 grid gap-4 lx:grid-cols-2">
         <div className="card p-5">
-          <h3 className="font-semibold text-signum-midnight">Find a pool</h3>
-          <p className="mt-1 text-neutral-700 text-[15px]">
+          <h3 className="font-semibold text-ink-100-100">Find a pool</h3>
+          <p className="mt-1 text-ink-100-300 text-[15px]">
             Choose a pool that fits your preferences and payout style.
           </p>
-          <p className="mt-3 text-sm text-neutral-600">
+          <p className="mt-3 text-sm text-ink-100-300">
             <LinkOut href="https://docs.signum.network/signum/signum-pools-list">
               Pool list
             </LinkOut>
           </p>
         </div>
         <div className="card p-5">
-          <h3 className="font-semibold text-signum-midnight">Network stats</h3>
-          <p className="mt-1 text-neutral-700 text-[15px]">
+          <h3 className="font-semibold text-ink-100-100">Network stats</h3>
+          <p className="mt-1 text-ink-100-300 text-[15px]">
             Explore the chain: blocks, accounts, miners and more.
           </p>
-          <div className="mt-3 flex gap-3 text-sm text-neutral-600">
+          <div className="mt-3 flex gap-3 text-sm text-ink-100-300">
             <LinkOut href="https://explorer.signum.network">Explorer</LinkOut>
             <span>•</span>
             <LinkOut href="https://stats.signum.network/miner/">
@@ -581,20 +577,20 @@ function FAQ() {
 
   return (
     <section id="faq" className="scroll-mt-28">
-      <h2 className="text-2xl font-semibold text-signum-midnight">
+      <h2 className="text-2xl font-semibold text-ink-100-100">
         FAQ
         <FontAwesomeIcon icon={faCircleQuestion} className="text-lg" />
       </h2>
-      <div className="mt-4 divide-y divide-neutral-200 rounded-2xl border border-neutral-200 bg-white">
+      <div className="mt-4 divide-y divide-white/10 rounded-2xl border border-white/10 bg-night-2">
         {faqs.map((f, i) => (
           <details key={i} className="group p-5">
             <summary className="flex cursor-pointer list-none items-center justify-between">
-              <span className="font-medium text-signum-midnight">
+              <span className="font-medium text-ink-100-100">
                 <strong>{f.q}</strong>
               </span>
               <ArrowRight className="h-4 w-4 transition-transform group-open:rotate-90" />
             </summary>
-            <div className="mt-2 text-signum-midnight text-[15px]">{f.a}</div>
+            <div className="mt-2 text-ink-100-100 text-[15px]">{f.a}</div>
           </details>
         ))}
       </div>
@@ -607,10 +603,10 @@ function FinalCTA() {
   return (
     <section className="scroll-mt-28">
       <div className="card p-6 text-center">
-        <h2 className="text-2xl font-semibold text-signum-midnight">
+        <h2 className="text-2xl font-semibold text-ink-100-100">
           Ready to start?
         </h2>
-        <p className="mt-1 text-neutral-700">
+        <p className="mt-1 text-ink-100-300">
           Pick a pool or run your own node — either way, storage powers the
           network.
         </p>
@@ -638,7 +634,7 @@ function SegmentedTabs({
   const [active, setActive] = useState<string>(tabs[0]);
   return (
     <div>
-      <div className="inline-flex rounded-xl ring-1 ring-neutral-200 bg-white p-1">
+      <div className="inline-flex rounded-xl ring-1 ring-neutral-200 bg-night-2 p-1">
         {tabs.map((t) => (
           <button
             key={t as string}
@@ -648,7 +644,7 @@ function SegmentedTabs({
               ${
                 active === t
                   ? "bg-signum-blue text-white shadow"
-                  : "text-signum-midnight hover:bg-neutral-50"
+                  : "text-ink-100-100 hover:bg-night-2"
               }
             `}
           >
@@ -678,12 +674,12 @@ function StepCard({
     <article className="card h-full p-5 flex flex-col">
       {" "}
       <div className="flex items-start gap-3">
-        <div className="rounded-xl bg-signum-acqua/70 p-2 text-signum-midnight/80">
+        <div className="rounded-xl bg-white/5 p-2 text-ink-100-100/80">
           {icon}
         </div>
         <div className="flex-1">
-          <h3 className="font-semibold text-signum-midnight">{title}</h3>
-          <p className="mt-1 text-neutral-700 text-[15px]">{text}</p>
+          <h3 className="font-semibold text-ink-100-100">{title}</h3>
+          <p className="mt-1 text-ink-100-300 text-[15px]">{text}</p>
         </div>
       </div>
       <div className="mt-auto pt-4 space-y-2">
@@ -692,7 +688,7 @@ function StepCard({
           href={href}
           target="_blank"
           rel="noreferrer"
-          className="btn btn-primary-sm w-full  justify-center text-signum-midnight"
+          className="btn btn-primary-sm w-full  justify-center text-ink-100-100"
         >
           <FontAwesomeIcon icon={faBook} className="text-sm" />
           <FontAwesomeIcon
@@ -705,7 +701,7 @@ function StepCard({
             href={extraLink.href}
             target="_blank"
             rel="noreferrer"
-            className="btn btn-primary-sm w-full  justify-center text-signum-midnight"
+            className="btn btn-primary-sm w-full  justify-center text-ink-100-100"
           >
             {extraLink.label}
             <FontAwesomeIcon
@@ -731,7 +727,7 @@ function LinkOut({
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="inline-flex items-center gap-1 underline underline-offset-4 hover:text-neutral-900"
+      className="inline-flex items-center gap-1 underline underline-offset-4 hover:text-ink-100-100"
     >
       {children}
       <ExternalLink className="h-3.5 w-3.5" />
